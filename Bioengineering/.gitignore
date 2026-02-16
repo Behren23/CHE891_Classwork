@@ -1,0 +1,4 @@
+__pycache__/
+sam/training/
+weights/
+sam2.egg-info

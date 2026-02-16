@@ -1,0 +1,14 @@
+{
+  "job_name": "ondemand/sys/dashboard/sys/bc_icer_jupyter_ubuntu",
+  "workdir": "/mnt/home/behren23/ondemand/data/sys/dashboard/batch_connect/sys/bc_icer_jupyter_ubuntu/output/d62f898d-0755-4c16-90c9-9a9403834c81",
+  "output_path": "/mnt/home/behren23/ondemand/data/sys/dashboard/batch_connect/sys/bc_icer_jupyter_ubuntu/output/d62f898d-0755-4c16-90c9-9a9403834c81/output.log",
+  "shell_path": "/bin/bash",
+  "email_on_started": true,
+  "wall_time": 7200,
+  "native": [
+    "--cpus-per-task",
+    "1",
+    "--mem",
+    "2GB"
+  ]
+}

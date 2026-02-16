@@ -1,0 +1,131 @@
+DEBUG:httpcore.connection:connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=10 socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x14878bd45910>
+DEBUG:httpcore.connection:start_tls.started ssl_context=<ssl.SSLContext object at 0x14877db31a30> server_hostname='huggingface.co' timeout=10
+DEBUG:httpcore.connection:start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x14877db75610>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 302, b'Found', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'1321'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 27 Jan 2026 22:21:56 GMT'), (b'Location', b'https://cas-bridge.xethub.hf.co/xet-bridge-us/67b601a7489d68b981047da7/dd1135589fda02411715c1552c50169c99e77f2c448960aa7f69f3baf20975dd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260127%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260127T222156Z&X-Amz-Expires=3600&X-Amz-Signature=d6abef922dbb8ff97c2d516a1a7bd454bc076ce0e82ede3c3243b8686936fb13&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27checkpoint.ckpt%3B+filename%3D%22checkpoint.ckpt%22%3B&x-id=GetObject&Expires=1769556116&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2OTU1NjExNn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82N2I2MDFhNzQ4OWQ2OGI5ODEwNDdkYTcvZGQxMTM1NTg5ZmRhMDI0MTE3MTVjMTU1MmM1MDE2OWM5OWU3N2YyYzQ0ODk2MGFhN2Y2OWYzYmFmMjA5NzVkZCoifV19&Signature=td2qF-S7zZ816iH-Slnu46TzZ29fqAieIM7p%7ExYbSrhiFhYmd-83aMqX%7EQ2Sjz7yusDVHcK87kyzCX%7E%7EpDxQ6XZCkHnUZamW%7EHHlYvTerotYGF2Bgl4j78DlNyUV9h-hNf64BB8xwu7jbkXPgkYtO-ZyUTAxu69dAPu3rX16D4wIVgbApUWoTjo91KEvcmWDxuKR2oLmWsW8jgWinftTN-omGE18mfD9LdndV9%7EbKDVL7cHEjvGX7d87yuMLf19wKycbVDF3KUsnEV5cT9q-3%7EAnd2g8Np2TQfgO3NErBNW3yjA43trxH5cIx4zgaxUTnS0dtFBMj0uwi5v4h9NTvg__&Key-Pair-Id=K2L8F4GPSG1IFC'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-69793a84-5673c45e5aaaa13a4add9b1e;c7bf0f19-fbb5-490c-bae8-f56adc3eed8b'), (b'RateLimit', b'"resolvers";r=2999;t=45'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'1fec9d4473a9da04f5e60026a70d7a93fb893e9e'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'X-Linked-Size', b'125195114'), (b'X-Linked-ETag', b'"c2fa4e3094d5db1b465024b95d87b976272a2d9b63b7bbb8e97e98a192350fa2"'), (b'X-Xet-Hash', b'dd1135589fda02411715c1552c50169c99e77f2c448960aa7f69f3baf20975dd'), (b'Link', b'<https://huggingface.co/api/models/microsoft/bioemu/xet-read-token/1fec9d4473a9da04f5e60026a70d7a93fb893e9e>; rel="xet-auth", <https://cas-server.xethub.hf.co/v1/reconstructions/dd1135589fda02411715c1552c50169c99e77f2c448960aa7f69f3baf20975dd>; rel="xet-reconstruction-info"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 6d608495c704c3391c897a110e88cffa.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'ORD58-P13'), (b'X-Amz-Cf-Id', b'KjFrazsqME6pilgmYtRS_Cvn92XN55o0daCukWYSrGCi3ZpnQMV_1A==')])
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/microsoft/bioemu/resolve/main/checkpoints/bioemu-v1.1/checkpoint.ckpt "HTTP/1.1 302 Found"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 307, b'Temporary Redirect', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'292'), (b'Connection', b'keep-alive'), (b'Date', b'Tue, 27 Jan 2026 22:21:56 GMT'), (b'Location', b'/api/resolve-cache/models/microsoft/bioemu/1fec9d4473a9da04f5e60026a70d7a93fb893e9e/checkpoints%2Fbioemu-v1.1%2Fconfig.yaml?%2Fmicrosoft%2Fbioemu%2Fresolve%2Fmain%2Fcheckpoints%2Fbioemu-v1.1%2Fconfig.yaml=&etag=%227986aee6e690217653cc8de82a5054a4c705e279%22'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-69793a84-0a0abd6154037daa742f2f6e;da9d70ac-118c-464e-85fb-6abbc88efda9'), (b'RateLimit', b'"resolvers";r=2998;t=45'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin, Accept'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'1fec9d4473a9da04f5e60026a70d7a93fb893e9e'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.yaml; filename="config.yaml";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'X-Linked-ETag', b'"7986aee6e690217653cc8de82a5054a4c705e279"'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 6d608495c704c3391c897a110e88cffa.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'ORD58-P13'), (b'X-Amz-Cf-Id', b'wwQOY1NbmY8jKqPmO8rmCDClb6xo3mioJAOghS8qyjWQHS-Td2bmTw==')])
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/microsoft/bioemu/resolve/main/checkpoints/bioemu-v1.1/config.yaml "HTTP/1.1 307 Temporary Redirect"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'text/plain; charset=utf-8'), (b'Content-Length', b'580'), (b'Connection', b'keep-alive'), (b'Date', b'Mon, 27 Oct 2025 17:05:19 GMT'), (b'ETag', b'"7986aee6e690217653cc8de82a5054a4c705e279"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-68ffa64f-01a2594804a3604d41ee95e0;552a73ab-e6e5-4598-8b82-790b7420f2bb'), (b'RateLimit', b'"resolvers";r=2997;t=165'), (b'RateLimit-Policy', b'"fixed window";"resolvers";q=3000;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Repo-Commit', b'1fec9d4473a9da04f5e60026a70d7a93fb893e9e'), (b'Accept-Ranges', b'bytes'), (b'X-Hub-Cache', b'MISS'), (b'Content-Disposition', b'inline; filename*=UTF-8\'\'config.yaml; filename="config.yaml";'), (b'Content-Security-Policy', b"default-src 'none'; sandbox"), (b'Vary', b'Origin'), (b'X-Cache', b'Hit from cloudfront'), (b'Via', b'1.1 6d608495c704c3391c897a110e88cffa.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'ORD58-P13'), (b'X-Amz-Cf-Id', b'ogFKvoEuoWvnCTw0cxEVAFwkwJEYbnTooBYnMyn7H2DRxA2MB5zltA=='), (b'Age', b'7967797')])
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/bioemu/1fec9d4473a9da04f5e60026a70d7a93fb893e9e/checkpoints%2Fbioemu-v1.1%2Fconfig.yaml "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'HEAD']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
+INFO:bioemu.so3_sde:Data loaded from /mnt/home/behren23/sampling_so3_cache/cache_igso3_s0.020-2.330-1000_l2000_o2000-3.npz
+INFO:bioemu.so3_sde:Data loaded from /mnt/home/behren23/sampling_so3_cache/cache_uso3_s0.020-2.330-1000_o2000-3.npz
+INFO:bioemu.so3_sde:Data loaded from /mnt/home/behren23/sampling_so3_cache/cache_score-scaling_s0.020-2.330-1000_l2001_o2000-3.npz
+INFO:__main__:Sampling 50 structures for sequence of length 654 residues...
+WARNING:__main__:Sequence QSFEPEIEALKSFKNGISNDPLGVLSDWTIIGSLRHCNWTGITCDSTGHVVSVSLLEKQLEGVLSPAIANLTYLQVLDLTSNSFTGKIPAEIGKLTELQSLVLTENLLEGDIPAEIGNCSSLVQLELYDNQLTGKIPAELGNLVQLQALRIYKNKLTSSIPSSLFRLTQLTHLGLSENHLVGPISEEIGFLESLEVLTLHSNNFTGEFPQSITNLRNLTVLTVGFNNISGELPADLGLLTNLRNLSAHDNLLTGPIPSSISNCTGLKLLDLSHNQMTGEIPRGFGRMNLTFISIGRNHFTGEIPDDIFNCSNLETLSVADNNLTGTLKPLIGKLQKLRILQVSYNSLTGPIPREIGNLKDLNILYLHSNGFTGRIPREMSNLTLLQGLRMYSNDLEGPIPEEMFDMKLLSVLDLSNNKFSGQIPALFSKLESLTYLSLQGNKFNGSIPASLKSLSLLNTFDISDNLLTGTIPGELLASLKNMQLYLNFSNNLLTGTIPKELGKLEMVQEIDLSNNLFSGSIPRSLQACKNVFTLDFSQNNLSGHIPDEVFQGMDMIISLNLSRNSFSGEIPQSFGNMTHLVSLDLSSNNLTGEIPESLANLSTLKHLKLASNNLKGHVPESGVFKNINASDLMGNTDLCGSKKPLKPCTIKQKS may be too long. Attempting with batch_size = 1.
+INFO:__main__:Using batch size 1
+INFO:__main__:Found 10 previous samples in /mnt/ffs24/home/behren23/bioemu_results/4MNA.
+Sampling batches...:   0%|          | 0/40 [00:00<?, ?it/s]INFO:__main__:Sampling with seed=1769552516134247577 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:   2%|▎         | 1/40 [00:18<12:04, 18.58s/it]INFO:__main__:Sampling with seed=1769552516134247578 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:   5%|▌         | 2/40 [00:36<11:25, 18.04s/it]INFO:__main__:Sampling with seed=1769552516134247579 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:   8%|▊         | 3/40 [00:53<11:00, 17.86s/it]INFO:__main__:Sampling with seed=1769552516134247580 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  10%|█         | 4/40 [01:11<10:40, 17.78s/it]INFO:__main__:Sampling with seed=1769552516134247581 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  12%|█▎        | 5/40 [01:29<10:20, 17.74s/it]INFO:__main__:Sampling with seed=1769552516134247582 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  15%|█▌        | 6/40 [01:46<10:01, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247583 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  18%|█▊        | 7/40 [02:04<09:43, 17.69s/it]INFO:__main__:Sampling with seed=1769552516134247584 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  20%|██        | 8/40 [02:22<09:26, 17.70s/it]INFO:__main__:Sampling with seed=1769552516134247585 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  22%|██▎       | 9/40 [02:39<09:08, 17.70s/it]INFO:__main__:Sampling with seed=1769552516134247586 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  25%|██▌       | 10/40 [02:57<08:51, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247587 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  28%|██▊       | 11/40 [03:15<08:34, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247588 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  30%|███       | 12/40 [03:33<08:16, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247589 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  32%|███▎      | 13/40 [03:50<07:58, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247590 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  35%|███▌      | 14/40 [04:08<07:40, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247591 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  38%|███▊      | 15/40 [04:26<07:24, 17.77s/it]INFO:__main__:Sampling with seed=1769552516134247592 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  40%|████      | 16/40 [04:44<07:06, 17.76s/it]INFO:__main__:Sampling with seed=1769552516134247593 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  42%|████▎     | 17/40 [05:01<06:47, 17.74s/it]INFO:__main__:Sampling with seed=1769552516134247594 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  45%|████▌     | 18/40 [05:19<06:29, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247595 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  48%|████▊     | 19/40 [05:37<06:12, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247596 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  50%|█████     | 20/40 [05:55<05:54, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247597 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  52%|█████▎    | 21/40 [06:12<05:36, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247598 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  55%|█████▌    | 22/40 [06:30<05:18, 17.70s/it]INFO:__main__:Sampling with seed=1769552516134247599 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  57%|█████▊    | 23/40 [06:48<05:01, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247600 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  60%|██████    | 24/40 [07:05<04:43, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247601 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  62%|██████▎   | 25/40 [07:23<04:25, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247602 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  65%|██████▌   | 26/40 [07:41<04:07, 17.70s/it]INFO:__main__:Sampling with seed=1769552516134247603 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  68%|██████▊   | 27/40 [07:58<03:50, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247604 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  70%|███████   | 28/40 [08:16<03:32, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247605 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  72%|███████▎  | 29/40 [08:34<03:14, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247606 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  75%|███████▌  | 30/40 [08:52<02:57, 17.72s/it]INFO:__main__:Sampling with seed=1769552516134247607 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  78%|███████▊  | 31/40 [09:09<02:39, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247608 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  80%|████████  | 32/40 [09:27<02:21, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247609 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  82%|████████▎ | 33/40 [09:45<02:04, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247610 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  85%|████████▌ | 34/40 [10:03<01:46, 17.75s/it]INFO:__main__:Sampling with seed=1769552516134247611 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  88%|████████▊ | 35/40 [10:20<01:28, 17.74s/it]INFO:__main__:Sampling with seed=1769552516134247612 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  90%|█████████ | 36/40 [10:38<01:10, 17.73s/it]INFO:__main__:Sampling with seed=1769552516134247613 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  92%|█████████▎| 37/40 [10:56<00:53, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247614 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  95%|█████████▌| 38/40 [11:13<00:35, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247615 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...:  98%|█████████▊| 39/40 [11:31<00:17, 17.71s/it]INFO:__main__:Sampling with seed=1769552516134247616 (base_seed=1769552516134247567)
+INFO:bioemu.get_embeds:Using cached embeddings in /mnt/home/behren23/.bioemu_embeds_cache.
+Sampling batches...: 100%|██████████| 40/40 [11:49<00:00, 17.71s/it]Sampling batches...: 100%|██████████| 40/40 [11:49<00:00, 17.73s/it]
+INFO:__main__:Converting samples to .pdb and .xtc...
+INFO:bioemu.convert_chemgraph:Filtering samples ...
+INFO:bioemu.convert_chemgraph:Filtered 50 samples down to 46 based on structure criteria. Filtering can be disabled with `--filter_samples=False`.
+INFO:__main__:Completed. Your samples are in /mnt/ffs24/home/behren23/bioemu_results/4MNA.
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete

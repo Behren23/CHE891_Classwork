@@ -1,0 +1,10 @@
+{
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": false
+  },
+  "firstStartTime": "2026-02-14T22:34:22.938Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "userID": "cacf3fe250de60bd2b5b83793767d1c8afb54150f0972e03be4a79cf664657cb"
+}

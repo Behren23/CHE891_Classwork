@@ -1,0 +1,23 @@
+{
+  "bc_email_on_started": "1",
+  "bc_num_hours": "2",
+  "num_cores": "1",
+  "memory": "2",
+  "lab": "1",
+  "jupyter_location": "default",
+  "conda_path": "",
+  "conda_env": "",
+  "jupyter_path": "/miniforge3/bin",
+  "singularity_image": "/mnt/research/common-data/Container_images/icer-centos7-img_latest.sif",
+  "overlay_path": "/path/to/overlay",
+  "working_dir": "/mnt/home/behren23/ondemand",
+  "use_gpu": "no",
+  "num_gpus": "1",
+  "gpu_type": "any",
+  "advanced_options": "no",
+  "node_type": "any",
+  "num_tasks": "1",
+  "account": "",
+  "qos": "",
+  "reservation": ""
+}

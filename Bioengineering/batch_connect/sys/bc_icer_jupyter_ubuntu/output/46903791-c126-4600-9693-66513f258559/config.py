@@ -1,0 +1,11 @@
+c.JupyterApp.config_file_name = 'ondemand_config'
+c.KernelSpecManager.ensure_native_kernel = False
+c.NotebookApp.ip = '*'
+c.NotebookApp.port = 54247
+c.NotebookApp.port_retries = 0
+c.NotebookApp.password = u'sha1:d6STY6cEt11EDY78:184169e0027f24d3b2ad1dc2e78573eb330c4d75'
+c.NotebookApp.base_url = '/node/amr-186/54247/'
+c.NotebookApp.open_browser = False
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.notebook_dir = '/mnt/home/behren23'
+c.NotebookApp.disable_check_xsrf = True

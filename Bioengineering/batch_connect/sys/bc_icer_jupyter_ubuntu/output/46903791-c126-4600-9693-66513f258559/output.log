@@ -1,0 +1,686 @@
+Script starting...
+Waiting for Jupyter server to open port 54247...
+Starting main script...
+TTT - Thu Jan 22 12:06:12 AM EST 2026
+Creating launcher wrapper script...
+TTT - Thu Jan 22 12:06:13 AM EST 2026
+Creating custom Jupyter kernels from user-created Conda environments...
+
+Currently Loaded Modules:
+  1) GCCcore/12.3.0
+  2) zlib/1.2.13-GCCcore-12.3.0
+  3) binutils/2.40-GCCcore-12.3.0
+  4) bzip2/1.0.8-GCCcore-12.3.0
+  5) ncurses/6.4-GCCcore-12.3.0
+  6) libreadline/8.2-GCCcore-12.3.0
+  7) Tcl/8.6.13-GCCcore-12.3.0
+  8) SQLite/3.42.0-GCCcore-12.3.0
+  9) XZ/5.4.2-GCCcore-12.3.0
+ 10) libffi/3.4.4-GCCcore-12.3.0
+ 11) OpenSSL/1.1
+ 12) Python/3.11.3-GCCcore-12.3.0
+ 13) cffi/1.15.1-GCCcore-12.3.0
+ 14) cryptography/41.0.1-GCCcore-12.3.0
+ 15) virtualenv/20.23.1-GCCcore-12.3.0
+ 16) Python-bundle-PyPI/2023.06-GCCcore-12.3.0
+ 17) OpenPGM/5.2.122-GCCcore-12.3.0
+ 18) libsodium/1.0.18-GCCcore-12.3.0
+ 19) util-linux/2.39-GCCcore-12.3.0
+ 20) ZeroMQ/4.3.4-GCCcore-12.3.0
+ 21) libxml2/2.11.4-GCCcore-12.3.0
+ 22) libxslt/1.1.38-GCCcore-12.3.0
+ 23) lxml/4.9.2-GCCcore-12.3.0
+ 24) hatchling/1.18.0-GCCcore-12.3.0
+ 25) BeautifulSoup/4.12.2-GCCcore-12.3.0
+ 26) IPython/8.14.0-GCCcore-12.3.0
+ 27) libyaml/0.2.5-GCCcore-12.3.0
+ 28) PyYAML/6.0-GCCcore-12.3.0
+ 29) PyZMQ/25.1.1-GCCcore-12.3.0
+ 30) tornado/6.3.2-GCCcore-12.3.0
+ 31) jupyter-server/2.7.2-GCCcore-12.3.0
+ 32) JupyterLab/4.0.5-GCCcore-12.3.0
+ 33) JupyterNotebook/7.0.2-GCCcore-12.3.0
+ 34) GCC/12.3.0
+ 35) OpenBLAS/0.3.23-GCC-12.3.0
+ 36) FlexiBLAS/3.3.1-GCC-12.3.0
+ 37) FFTW/3.3.10-GCC-12.3.0
+ 38) gfbf/2023a
+ 39) pybind11/2.11.1-GCCcore-12.3.0
+ 40) SciPy-bundle/2023.07-gfbf-2023a
+ 41) jupyterlmod/4.0.3-GCCcore-12.3.0
+ 42) CUDA/12.6.0
+
+ 
+
+TTT - Thu Jan 22 12:06:14 AM EST 2026
++ jupyter kernelspec list
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+Available kernels:
+  python3    /opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/share/jupyter/kernels/python3
+TTT - Thu Jan 22 12:06:15 AM EST 2026
++ sort
++ env
+ ;;
+ ;;
+ ;;
+ { 
+ { 
+ { 
+ { 
+ { 
+ { 
+ { 
+ { 
+ { 
+ { 
+ };
+ };
+ };
+ };
+ };
+ };
+ };
+ };
+ };
+ };
+}
+}
+}
+}
+}
+}
+}
+}
+ $strategy $host $port;
+ $strategy $host $port;
+ACLOCAL_PATH=/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share/aclocal:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share/aclocal
+BASH_ENV=/usr/lmod/lmod/init/bash
+BASH_FUNC_create_passwd%%=() {  tr -cd 'a-zA-Z0-9' < /dev/urandom 2> /dev/null | head -c${1:-8}
+BASH_FUNC_find_port%%=() {  local host="${1:-localhost}";
+BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"
+BASH_FUNC_module%%=() {  if [ -z "${LMOD_SH_DBG_ON+x}" ]; then
+BASH_FUNC_port_used%%=() {  local port="${1#*:}";
+BASH_FUNC_random_number%%=() {  shuf -i ${1}-${2} -n 1
+BASH_FUNC_source_helpers%%=() {  function random_number () 
+BASH_FUNC_wait_until_port_used%%=() {  local port="${1}";
+ case "$-" in 
+CMAKE_LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/lib64
+CMAKE_PREFIX_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0:/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0
+CONFIG_FILE=/mnt/home/behren23/ondemand/data/sys/dashboard/batch_connect/sys/bc_icer_jupyter_ubuntu/output/46903791-c126-4600-9693-66513f258559/config.py
+ continue;
+ continue;
+CPATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/include:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/extras/CUPTI/include:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/include:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/include:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/include:/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/include/libxml2:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/include:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/include
+CUDA_HOME=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0
+CUDA_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0
+CUDA_ROOT=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0
+CUDA_VISIBLE_DEVICES=
+CVS_RSH=ssh
+ ( : < /dev/tcp/$1/$2 ) > /dev/null 2>&1;
+ do
+ do
+ do
+ do
+ do
+ do
+ do
+ do
+ done;
+ done;
+ done;
+ done;
+ done;
+ done;
+ done;
+ done;
+EBDEVELBEAUTIFULSOUP=/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0/easybuild/BeautifulSoup-4.12.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELBINUTILS=/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/easybuild/binutils-2.40-GCCcore-12.3.0-easybuild-devel
+EBDEVELBZIP2=/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/easybuild/bzip2-1.0.8-GCCcore-12.3.0-easybuild-devel
+EBDEVELCFFI=/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0/easybuild/cffi-1.15.1-GCCcore-12.3.0-easybuild-devel
+EBDEVELCRYPTOGRAPHY=/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0/easybuild/cryptography-41.0.1-GCCcore-12.3.0-easybuild-devel
+EBDEVELCUDA=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/easybuild/CUDA-12.6.0-easybuild-devel
+EBDEVELFFTW=/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/easybuild/FFTW-3.3.10-GCC-12.3.0-easybuild-devel
+EBDEVELFLEXIBLAS=/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/easybuild/FlexiBLAS-3.3.1-GCC-12.3.0-easybuild-devel
+EBDEVELGCCCORE=/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/easybuild/GCCcore-12.3.0-easybuild-devel
+EBDEVELGCC=/opt/software-current/2023.06/x86_64/amd/zen2/software/GCC/12.3.0/easybuild/GCC-12.3.0-easybuild-devel
+EBDEVELGFBF=/opt/software-current/2023.06/x86_64/amd/zen2/software/gfbf/2023a/easybuild/gfbf-2023a-easybuild-devel
+EBDEVELHATCHLING=/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/easybuild/hatchling-1.18.0-GCCcore-12.3.0-easybuild-devel
+EBDEVELIPYTHON=/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/easybuild/IPython-8.14.0-GCCcore-12.3.0-easybuild-devel
+EBDEVELJUPYTERLAB=/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/easybuild/JupyterLab-4.0.5-GCCcore-12.3.0-easybuild-devel
+EBDEVELJUPYTERLMOD=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/easybuild/jupyterlmod-4.0.3-GCCcore-12.3.0-easybuild-devel
+EBDEVELJUPYTERMINSERVER=/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/easybuild/jupyter-server-2.7.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELJUPYTERNOTEBOOK=/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/easybuild/JupyterNotebook-7.0.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBFFI=/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/easybuild/libffi-3.4.4-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBREADLINE=/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/easybuild/libreadline-8.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBSODIUM=/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/easybuild/libsodium-1.0.18-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBXML2=/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/easybuild/libxml2-2.11.4-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBXSLT=/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/easybuild/libxslt-1.1.38-GCCcore-12.3.0-easybuild-devel
+EBDEVELLIBYAML=/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/easybuild/libyaml-0.2.5-GCCcore-12.3.0-easybuild-devel
+EBDEVELLXML=/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0/easybuild/lxml-4.9.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELNCURSES=/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/easybuild/ncurses-6.4-GCCcore-12.3.0-easybuild-devel
+EBDEVELOPENBLAS=/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/easybuild/OpenBLAS-0.3.23-GCC-12.3.0-easybuild-devel
+EBDEVELOPENPGM=/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/easybuild/OpenPGM-5.2.122-GCCcore-12.3.0-easybuild-devel
+EBDEVELOPENSSL=/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/easybuild/OpenSSL-1.1-easybuild-devel
+EBDEVELPYBIND11=/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/easybuild/pybind11-2.11.1-GCCcore-12.3.0-easybuild-devel
+EBDEVELPYTHONMINBUNDLEMINPYPI=/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/easybuild/Python-bundle-PyPI-2023.06-GCCcore-12.3.0-easybuild-devel
+EBDEVELPYTHON=/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/easybuild/Python-3.11.3-GCCcore-12.3.0-easybuild-devel
+EBDEVELPYYAML=/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0/easybuild/PyYAML-6.0-GCCcore-12.3.0-easybuild-devel
+EBDEVELPYZMQ=/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0/easybuild/PyZMQ-25.1.1-GCCcore-12.3.0-easybuild-devel
+EBDEVELSCIPYMINBUNDLE=/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/easybuild/SciPy-bundle-2023.07-gfbf-2023a-easybuild-devel
+EBDEVELSQLITE=/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/easybuild/SQLite-3.42.0-GCCcore-12.3.0-easybuild-devel
+EBDEVELTCL=/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/easybuild/Tcl-8.6.13-GCCcore-12.3.0-easybuild-devel
+EBDEVELTORNADO=/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0/easybuild/tornado-6.3.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELUTILMINLINUX=/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/easybuild/util-linux-2.39-GCCcore-12.3.0-easybuild-devel
+EBDEVELVIRTUALENV=/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/easybuild/virtualenv-20.23.1-GCCcore-12.3.0-easybuild-devel
+EBDEVELXZ=/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/easybuild/XZ-5.4.2-GCCcore-12.3.0-easybuild-devel
+EBDEVELZEROMQ=/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/easybuild/ZeroMQ-4.3.4-GCCcore-12.3.0-easybuild-devel
+EBDEVELZLIB=/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/easybuild/zlib-1.2.13-GCCcore-12.3.0-easybuild-devel
+EBEXTSLISTBEAUTIFULSOUP=soupsieve-2.4.1,BeautifulSoup-4.12.2
+EBEXTSLISTCFFI=pycparser-2.21,cffi-1.15.1
+EBEXTSLISTHATCHLING=pathspec-0.11.1,pluggy-1.2.0,editables-0.3,trove_classifiers-2023.5.24,hatchling-1.18.0,hatch_vcs-0.3.0,hatch_fancy_pypi_readme-23.1.0,hatch-requirements-txt-0.4.1
+EBEXTSLISTIPYTHON=traitlets-5.9.0,pure_eval-0.2.2,executing-1.2.0,asttokens-2.2.1,stack_data-0.6.2,prompt_toolkit-3.0.39,pickleshare-0.7.5,matplotlib-inline-0.1.6,parso-0.8.3,jedi-0.19.0,backcall-0.2.0,ipython-8.14.0
+EBEXTSLISTJUPYTERLAB=json5-0.9.14,jupyterlab_server-2.24.0,jupyter-lsp-2.2.0,async-lru-2.0.4,jupyterlab-4.0.5
+EBEXTSLISTJUPYTERLMOD=jupyterlmod-4.0.3
+EBEXTSLISTJUPYTERMINSERVER=hatch_nodejs_version-0.3.1,hatch_jupyter_builder-0.8.3,websocket-client-1.6.1,terminado-0.17.1,Send2Trash-1.8.2,prometheus_client-0.17.1,overrides-7.4.0,jupyter_core-5.3.1,fastjsonschema-2.18.0,tinycss2-1.2.1,pandocfilters-1.5.0,mistune-3.0.1,deprecation-2.1.0,jupyter_packaging-0.12.3,jupyterlab_pygments-0.2.2,defusedxml-0.7.1,bleach-6.0.0,arrow-1.2.3,nbformat-5.9.2,nbclient-0.8.0,jupyter_client-8.3.0,nbconvert-7.7.4,jupyter_server_terminals-0.4.4,rfc3986_validator-0.1.1,rfc3339_validator-0.1.4,rpds_py-0.9.2,referencing-0.30.2,python-json-logger-2.0.7,jsonschema_specifications-2023.7.1,jsonschema-4.18.0,jupyter_events-0.7.0,argon2-cffi-bindings-21.2.0,argon2_cffi-23.1.0,sniffio-1.3.0,anyio-3.7.1,jupyter_server-2.7.2,jupyterlab_widgets-3.0.8,widgetsnbextension-4.0.8,comm-0.1.4,ipywidgets-8.1.0,notebook_shim-0.2.3,nest_asyncio-1.5.7,ipykernel-6.25.1,ipython_genutils-0.2.0,debugpy-1.6.7.post1
+EBEXTSLISTPYTHON=flit_core-3.9.0,wheel-0.40.0,setuptools-67.7.2,tomli-2.0.1,packaging-23.1,typing_extensions-4.6.3,setuptools_scm-7.1.0,pip-23.1.2
+EBEXTSLISTPYTHONMINBUNDLEMINPYPI=blist-1.3.6,pbr-5.11.1,Cython-0.29.35,six-1.16.0,toml-0.10.2,tomli-2.0.1,packaging-23.1,python-dateutil-2.8.2,decorator-5.1.1,liac-arff-2.5.0,pycryptodome-3.18.0,ecdsa-0.18.0,ipaddress-1.0.23,asn1crypto-1.5.1,idna-3.4,pycparser-2.21,cffi-1.15.1,semantic_version-2.10.0,pyasn1-0.5.0,PyNaCl-1.5.0,pyparsing-3.1.0,netifaces-0.11.0,netaddr-0.8.0,mock-5.0.2,pytz-2023.3,bitstring-4.0.2,appdirs-1.4.4,distlib-0.3.6,zipp-3.15.0,importlib_metadata-6.7.0,backports.entry-points-selectable-1.2.0,pathspec-0.11.1,pluggy-1.2.0,editables-0.3,filelock-3.12.2,platformdirs-3.8.0,scandir-1.10.0,pathlib2-2.3.7.post1,importlib_resources-5.12.0,docopt-0.6.2,joblib-1.2.0,chardet-5.1.0,certifi-2023.5.7,urllib3-1.26.16,charset-normalizer-3.1.0,requests-2.31.0,xlrd-2.0.1,py_expression_eval-0.3.14,tabulate-0.9.0,ujson-5.8.0,atomicwrites-1.4.1,py-1.11.0,more-itertools-9.1.0,attrs-23.1.0,backports.functools_lru_cache-1.6.5,wcwidth-0.2.6,iniconfig-2.0.0,colorama-0.4.6,exceptiongroup-1.1.1,pytest-7.4.0,MarkupSafe-2.1.3,Jinja2-3.1.2,sphinxcontrib-serializinghtml-1.1.5,sphinxcontrib-websupport-1.2.4,Pygments-2.15.1,imagesize-1.4.1,docutils-0.20.1,snowballstemmer-2.2.0,alabaster-0.7.13,sphinxcontrib-applehelp-1.0.4,sphinxcontrib-devhelp-1.0.2,sphinxcontrib-htmlhelp-2.0.1,sphinxcontrib-jsmath-1.0.1,sphinxcontrib-qthelp-1.0.3,Babel-2.12.1,Sphinx-7.0.1,sphinx-bootstrap-theme-0.8.1,click-8.1.3,psutil-5.9.5,future-0.18.3,sortedcontainers-2.4.0,intervaltree-3.1.0,pytoml-0.1.21,zipfile36-0.1.3,tomli_w-1.0.0,regex-2023.6.3,intreehooks-1.0,pylev-1.4.0,pastel-0.2.1,crashtest-0.4.1,jeepney-0.8.0,SecretStorage-3.3.3,keyring-23.13.1,jaraco.classes-3.2.3,keyrings.alt-4.2.0,tomlkit-0.11.8,shellingham-1.5.0.post1,requests-toolbelt-1.0.0,pyrsistent-0.19.3,pkginfo-1.9.6,ptyprocess-0.7.0,pexpect-4.8.0,jsonschema-4.17.3,simplejson-3.19.1,webencodings-0.5.1,html5lib-1.1,distro-1.8.0,rapidfuzz-2.15.1,cleo-2.0.1,cachy-0.3.0,msgpack-1.0.5,CacheControl-0.12.14,lockfile-0.12.2,glob2-0.7,dulwich-0.21.5,fsspec-2023.6.0,threadpoolctl-3.1.0,simplegeneric-0.8.1,pooch-1.7.0,doit-0.36.0,cloudpickle-2.2.1,pydevtool-0.3.0,Pygments-2.15.1,mdurl-0.1.2,markdown-it-py-3.0.0,rich-13.4.2,rich-click-1.6.1,commonmark-0.9.1,execnet-1.9.0,pytest-xdist-3.3.1
+EBEXTSLISTSCIPYMINBUNDLE=numpy-1.25.1,ply-3.11,gast-0.5.4,beniget-0.4.1,pythran-0.13.1,versioneer-0.29,scipy-1.11.1,numexpr-2.8.4,Bottleneck-1.3.7,tzdata-2023.3,pandas-2.0.3,mpmath-1.3.0,deap-1.4.0
+EBEXTSLISTVIRTUALENV=distlib-0.3.6,filelock-3.12.2,platformdirs-3.8.0,virtualenv-20.23.1
+EBROOTBEAUTIFULSOUP=/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0
+EBROOTBINUTILS=/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0
+EBROOTBZIP2=/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0
+EBROOTCFFI=/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0
+EBROOTCRYPTOGRAPHY=/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0
+EBROOTCUDA=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0
+EBROOTFFTW=/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0
+EBROOTFLEXIBLAS=/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0
+EBROOTGCCCORE=/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0
+EBROOTGCC=/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0
+EBROOTGFBF=/opt/software-current/2023.06/x86_64/amd/zen2/software/gfbf/2023a
+EBROOTHATCHLING=/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0
+EBROOTIPYTHON=/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0
+EBROOTJUPYTERLAB=/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0
+EBROOTJUPYTERLMOD=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0
+EBROOTJUPYTERMINSERVER=/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0
+EBROOTJUPYTERNOTEBOOK=/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0
+EBROOTLIBFFI=/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0
+EBROOTLIBREADLINE=/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0
+EBROOTLIBSODIUM=/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0
+EBROOTLIBXML2=/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0
+EBROOTLIBXSLT=/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0
+EBROOTLIBYAML=/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0
+EBROOTLXML=/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0
+EBROOTNCURSES=/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0
+EBROOTOPENBLAS=/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0
+EBROOTOPENPGM=/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0
+EBROOTOPENSSL=/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1
+EBROOTPYBIND11=/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0
+EBROOTPYTHONMINBUNDLEMINPYPI=/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0
+EBROOTPYTHON=/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0
+EBROOTPYYAML=/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0
+EBROOTPYZMQ=/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0
+EBROOTSCIPYMINBUNDLE=/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a
+EBROOTSQLITE=/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0
+EBROOTTCL=/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0
+EBROOTTORNADO=/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0
+EBROOTUTILMINLINUX=/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0
+EBROOTVIRTUALENV=/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0
+EBROOTXZ=/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0
+EBROOTZEROMQ=/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0
+EBROOTZLIB=/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0
+EBVERSIONBEAUTIFULSOUP=4.12.2
+EBVERSIONBINUTILS=2.40
+EBVERSIONBZIP2=1.0.8
+EBVERSIONCFFI=1.15.1
+EBVERSIONCRYPTOGRAPHY=41.0.1
+EBVERSIONCUDA=12.6.0
+EBVERSIONFFTW=3.3.10
+EBVERSIONFLEXIBLAS=3.3.1
+EBVERSIONGCC=12.3.0
+EBVERSIONGCCCORE=12.3.0
+EBVERSIONGFBF=2023a
+EBVERSIONHATCHLING=1.18.0
+EBVERSIONIPYTHON=8.14.0
+EBVERSIONJUPYTERLAB=4.0.5
+EBVERSIONJUPYTERLMOD=4.0.3
+EBVERSIONJUPYTERMINSERVER=2.7.2
+EBVERSIONJUPYTERNOTEBOOK=7.0.2
+EBVERSIONLIBFFI=3.4.4
+EBVERSIONLIBREADLINE=8.2
+EBVERSIONLIBSODIUM=1.0.18
+EBVERSIONLIBXML2=2.11.4
+EBVERSIONLIBXSLT=1.1.38
+EBVERSIONLIBYAML=0.2.5
+EBVERSIONLXML=4.9.2
+EBVERSIONNCURSES=6.4
+EBVERSIONOPENBLAS=0.3.23
+EBVERSIONOPENPGM=5.2.122
+EBVERSIONOPENSSL=1.1
+EBVERSIONPYBIND11=2.11.1
+EBVERSIONPYTHON=3.11.3
+EBVERSIONPYTHONMINBUNDLEMINPYPI=2023.06
+EBVERSIONPYYAML=6.0
+EBVERSIONPYZMQ=25.1.1
+EBVERSIONSCIPYMINBUNDLE=2023.07
+EBVERSIONSQLITE=3.42.0
+EBVERSIONTCL=8.6.13
+EBVERSIONTORNADO=6.3.2
+EBVERSIONUTILMINLINUX=2.39
+EBVERSIONVIRTUALENV=20.23.1
+EBVERSIONXZ=5.4.2
+EBVERSIONZEROMQ=4.3.4
+EBVERSIONZLIB=1.2.13
+ echo "${port}";
+ echo "${port}";
+ echo "command options are lsof, nc, bash's /dev/tcp, or python (or python3) with socket lib.";
+ echo "command options are lsof, nc, bash's /dev/tcp, or python (or python3) with socket lib.";
+ echo "commands to find port were either not found or inaccessible.";
+ echo "commands to find port were either not found or inaccessible.";
+ echo "error: failed to find available port in range ${min_port}..${max_port}" 1>&2;
+ echo "error: failed to find available port in range ${min_port}..${max_port}" 1>&2;
+ echo "Shell debugging restarted" 1>&2;
+ echo "Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output" 1>&2;
+EESSI_CPU_FAMILY=x86_64
+EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+EESSI_INIT_PREFIX=/cvmfs/software.eessi.io/versions/2023.06/init
+EESSI_OS_TYPE=linux
+EESSI_SILENT=1
+EESSI_SOFTWARE_LAYER_VERSION_SUFFIX=
+EESSI_SOFTWARE_SUBDIR=x86_64/amd/zen2
+EESSI_USE_ARCHDETECT=1
+EESSI_USE_ARCHSPEC=0
+EESSI_VERSION=2023.06
+EESSI_VERSION_DEFAULT=2023.06
+ else
+ else
+ else
+ENVIRONMENT=BATCH
+ esac;
+ eval "$($LMOD_CMD shell "$@")" && eval "$(${LMOD_SETTARG_CMD:-:} -s sh)";
+ export -f create_passwd
+ export -f find_port;
+ export -f port_used;
+ export -f random_number;
+ export -f wait_until_port_used;
+ fi
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ fi;
+ for ((attempt=0; attempt<=$retries; attempt++))
+ for ((attempt=0; attempt<=$retries; attempt++))
+ for ((i=1; i<=time*2; i++))
+ for ((i=1; i<=time*2; i++))
+ for port in "${port_range[@]}";
+ for port in "${port_range[@]}";
+ for strategy in ${port_strategies[@]};
+ for strategy in ${port_strategies[@]};
+ function create_passwd () 
+ function find_port () 
+ function port_used () 
+ function port_used_bash () 
+ function port_used_lsof () 
+ function port_used_nc () 
+ function port_used_python () 
+ function port_used_python3 () 
+ function wait_until_port_used () 
+HISTCONTROL=ignoredups
+HISTSIZE=1000
+HOME=/mnt/home/behren23
+host=amr-186
+HOSTNAME=amr-186
+HPCC_CLUSTER_FLAVOR=amd20
+HYDRA_BOOTSTRAP=slurm
+HYDRA_LAUNCHER_EXTRA_ARGS=--external-launcher
+ if [ "$bash_supported" == "/dev/tcp/*/*" ]; then
+ if [ "$port_status" == "0" ]; then
+ if [ "$port_status" == "0" ]; then
+ if [ "$port_status" == "127" ]; then
+ if [ "$port_status" == "127" ]; then
+ if [[ "$status" == "0" ]] || [[ "$status" == "1" ]]; then
+ if [[ "$status" == "0" ]] || [[ "$status" == "1" ]]; then
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ if port_used "${host}:${port}"; then
+ if port_used "${host}:${port}"; then
+I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS=--external-launcher
+I_MPI_HYDRA_BOOTSTRAP=slurm
+__Init_Default_Modules=1
+is=bash
+jtype=lab
+JUPYTER_CONFIG_PATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/etc/jupyter:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/etc/jupyter:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/etc/jupyter:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/etc/jupyter
+JUPYTERLAB_DIR=/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share/jupyter/lab
+JUPYTERLAB_SETTINGS_DIR=/mnt/home/behren23/.jupyter/lab/user-settings
+JUPYTERLAB_WORKSPACES_DIR=/mnt/home/behren23/.jupyter/lab/workspaces
+JUPYTER_PATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/share/jupyter:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/share/jupyter:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share/jupyter:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/share/jupyter
+LANG=en_US.UTF-8
+LD_LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/lib64:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/extras/CUPTI/lib64:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/lib:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/lib64
+LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/stubs/lib64:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/lib:/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/lib:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib
+_LMFILES_=/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/GCCcore/12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/zlib/1.2.13-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/binutils/2.40-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/bzip2/1.0.8-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/ncurses/6.4-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/libreadline/8.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/Tcl/8.6.13-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/SQLite/3.42.0-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/XZ/5.4.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/libffi/3.4.4-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/OpenSSL/1.1.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/Python/3.11.3-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/cffi/1.15.1-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/cryptography/41.0.1-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/virtualenv/20.23.1-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/Python-bundle-PyPI/2023.06-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/OpenPGM/5.2.122-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/libsodium/1.0.18-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/util-linux/2.39-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/ZeroMQ/4.3.4-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/libxml2/2.11.4-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/libxslt/1.1.38-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/lxml/4.9.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/hatchling/1.18.0-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/BeautifulSoup/4.12.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/IPython/8.14.0-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/libyaml/0.2.5-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/PyYAML/6.0-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/PyZMQ/25.1.1-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/tornado/6.3.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/jupyter-server/2.7.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/JupyterLab/4.0.5-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/JupyterNotebook/7.0.2-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/GCC/12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/OpenBLAS/0.3.23-GCC-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/FlexiBLAS/3.3.1-GCC-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/FFTW/3.3.10-GCC-12.3.0.lua:/opt/software-current/2023.06/x86_64/amd/zen2/modules/all/gfbf/2023a.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/pybind11/2.11.1-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/SciPy-bundle/2023.07-gfbf-2023a.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/jupyterlmod/4.0.3-GCCcore-12.3.0.lua:/opt/software-current/2023.06/x86_64/generic/modules/all/CUDA/12.6.0.lua
+LMOD_ADMIN_FILE=/etc/eessi/lmod_admin.lua
+LMOD_CMD=/usr/lmod/lmod/libexec/lmod
+LMOD_DIR=/usr/lmod/lmod/libexec
+LMOD_DISABLE_SAME_NAME_AUTOSWAP=yes
+ __lmod_my_status=$?;
+LMOD_PACKAGE_PATH=/etc/eessi
+LMOD_PKG=/usr/lmod/lmod
+__LMOD_REF_COUNT_ACLOCAL_PATH=/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share/aclocal:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share/aclocal:1
+__LMOD_REF_COUNT_CMAKE_LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/lib64:1
+__LMOD_REF_COUNT_CMAKE_PREFIX_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0:1;/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0:1
+__LMOD_REF_COUNT_CPATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/include:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/extras/CUPTI/include:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/include:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/include/libxml2:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/include:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/include:1
+__LMOD_REF_COUNT_JUPYTER_CONFIG_PATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/etc/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/etc/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/etc/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/etc/jupyter:1
+__LMOD_REF_COUNT_JUPYTER_PATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/share/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/share/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share/jupyter:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/share/jupyter:1
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/lib64:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/extras/CUPTI/lib64:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/lib64:1
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/stubs/lib64:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages/numpy/core/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib64:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/lib:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib:1
+__LMOD_REF_COUNT_MANPATH=/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/share/man:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/share/man:1;/usr/lmod/lmod/share/man:1;/opt/puppetlabs/puppet/share/man:1
+__LMOD_REF_COUNT_MODULEPATH=/opt/software-current/2023.06/x86_64/amd/zen2/modules/all:1;/opt/software-current/2023.06/x86_64/generic/modules/all:1
+__LMOD_REF_COUNT_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/bin:1;/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/bin:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/sbin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/bin:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/bin:1;/usr/local/sbin:1;/usr/local/bin:1;/usr/sbin:1;/usr/bin:1;/sbin:1;/bin:1;/usr/games:1;/usr/local/games:1;/snap/bin:1;/usr/local/hpcc/bin:6;/usr/lpp/mmfs/bin:3;/opt/puppetlabs/bin:1
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/share/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib/pkgconfig:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib/pkgconfig:1
+__LMOD_REF_COUNT_PYTHONPATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0/lib/python3.11/site-packages:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/easybuild/python:1
+__LMOD_REF_COUNT_XDG_DATA_DIRS=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/share:1;/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/share:1;/usr/share/gnome:1;/usr/local/share:1;/usr/share:1
+LMOD_ROOT=/usr/lmod
+LMOD_SETTARG_FULL_SUPPORT=no
+ __lmod_sh_dbg='v'
+ __lmod_sh_dbg='vx'
+ __lmod_sh_dbg='x'
+LMOD_SITE_MSG_FILE=/etc/eessi/lmod_messages.lua
+LMOD_sys=Linux
+LMOD_SYSTEM_DEFAULT_MODULES=foss/2023a:imkl/2023.1.0:bzip2/1.0.8-GCCcore-12.3.0:Boost/1.82.0-GCC-12.3.0:CMake/3.26.3-GCCcore-12.3.0:SQLite/3.42.0-GCCcore-12.3.0:Python-bundle-PyPI/2023.06-GCCcore-12.3.0:GMP/6.2.1-GCCcore-12.3.0:MATLAB/2023b:R/4.3.2-gfbf-2023a:powertools
+LMOD_VERSION=8.7.37
+LOADEDMODULES=GCCcore/12.3.0:zlib/1.2.13-GCCcore-12.3.0:binutils/2.40-GCCcore-12.3.0:bzip2/1.0.8-GCCcore-12.3.0:ncurses/6.4-GCCcore-12.3.0:libreadline/8.2-GCCcore-12.3.0:Tcl/8.6.13-GCCcore-12.3.0:SQLite/3.42.0-GCCcore-12.3.0:XZ/5.4.2-GCCcore-12.3.0:libffi/3.4.4-GCCcore-12.3.0:OpenSSL/1.1:Python/3.11.3-GCCcore-12.3.0:cffi/1.15.1-GCCcore-12.3.0:cryptography/41.0.1-GCCcore-12.3.0:virtualenv/20.23.1-GCCcore-12.3.0:Python-bundle-PyPI/2023.06-GCCcore-12.3.0:OpenPGM/5.2.122-GCCcore-12.3.0:libsodium/1.0.18-GCCcore-12.3.0:util-linux/2.39-GCCcore-12.3.0:ZeroMQ/4.3.4-GCCcore-12.3.0:libxml2/2.11.4-GCCcore-12.3.0:libxslt/1.1.38-GCCcore-12.3.0:lxml/4.9.2-GCCcore-12.3.0:hatchling/1.18.0-GCCcore-12.3.0:BeautifulSoup/4.12.2-GCCcore-12.3.0:IPython/8.14.0-GCCcore-12.3.0:libyaml/0.2.5-GCCcore-12.3.0:PyYAML/6.0-GCCcore-12.3.0:PyZMQ/25.1.1-GCCcore-12.3.0:tornado/6.3.2-GCCcore-12.3.0:jupyter-server/2.7.2-GCCcore-12.3.0:JupyterLab/4.0.5-GCCcore-12.3.0:JupyterNotebook/7.0.2-GCCcore-12.3.0:GCC/12.3.0:OpenBLAS/0.3.23-GCC-12.3.0:FlexiBLAS/3.3.1-GCC-12.3.0:FFTW/3.3.10-GCC-12.3.0:gfbf/2023a:pybind11/2.11.1-GCCcore-12.3.0:SciPy-bundle/2023.07-gfbf-2023a:jupyterlmod/4.0.3-GCCcore-12.3.0:CUDA/12.6.0
+ local bash_supported=$(strings /bin/bash 2>/dev/null | grep tcp);
+ local host="${1:-localhost}";
+ local host=$((expr "${1}" : '\(.*\):' || echo "localhost") | awk 'END{print $NF}');
+ local host=$((expr "${1}" : '\(.*\):' || echo "localhost") | awk 'END{print $NF}');
+ local max_port=${3:-54500};
+ local max_port=${3:-54500};
+ local min_port=${2:-54000};
+ local min_port=${2:-54000};
+ local port="${1#*:}";
+ local port="${1}";
+ local port_range=($(shuf -i ${min_port}-${max_port}));
+ local port_range=($(shuf -i ${min_port}-${max_port}));
+ local port_strategies=(port_used_nc port_used_lsof port_used_bash port_used_python port_used_python3);
+ local port_strategies=(port_used_nc port_used_lsof port_used_bash port_used_python port_used_python3);
+ local retries=1;
+ local retries=1;
+ local time="${2:-30}";
+ local time="${2:-30}";
+LOGNAME=behren23
+ lsof -i :"$2" > /dev/null 2>&1
+MAIL=/var/spool/mail/behren23
+MANPATH=/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/share/man:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/share/man:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/share/man:/usr/lmod/lmod/share/man:/opt/puppetlabs/puppet/share/man
+MODULEPATH=/opt/software-current/2023.06/x86_64/amd/zen2/modules/all:/opt/software-current/2023.06/x86_64/generic/modules/all
+MODULEPATH_ROOT=/usr/modulefiles
+MODULESHOME=/usr/lmod/lmod
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IGZhbHNlLApjX3Nob3J0VGltZSA9IGZhbHNlLApkZXB0aFQgPSB7fSwKZmFtaWx5ID0ge30sCm1UID0gewpCZWF1dGlmdWxTb3VwID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvZ2VuZXJpYy9tb2R1bGVzL2FsbC9CZWF1dGlmdWxTb3VwLzQuMTIuMi1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJCZWF1dGlmdWxTb3VwLzQuMTIuMi1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDI1LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIkJlYXV0aWZ1bFNv
+_ModuleTable002_=dXAvNC4xMi4yLUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDA0LjAwMDAwMDAxMi4wMDAwMDAwMDIuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKQ1VEQSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvQ1VEQS8xMi42LjAubHVhIiwKZnVsbE5hbWUgPSAiQ1VEQS8xMi42LjAiLApsb2FkT3JkZXIgPSA0MiwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJDVURBIiwKd1YgPSAiMDAwMDAwMDEyLjAwMDAwMDAwNi4qemZpbmFsIiwKfSwKRkZUVyA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJy
+_ModuleTable003_=ZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL0ZGVFcvMy4zLjEwLUdDQy0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiRkZUVy8zLjMuMTAtR0NDLTEyLjMuMCIsCmxvYWRPcmRlciA9IDM3LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIkZGVFcvMy4zLjEwLUdDQy0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDMuMDAwMDAwMDAzLjAwMDAwMDAxMC4qZ2NjLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCkZsZXhpQkxBUyA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL0Zs
+_ModuleTable004_=ZXhpQkxBUy8zLjMuMS1HQ0MtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIkZsZXhpQkxBUy8zLjMuMS1HQ0MtMTIuMy4wIiwKbG9hZE9yZGVyID0gMzYsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVwdGggPSAyLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiRmxleGlCTEFTLzMuMy4xLUdDQy0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDMuMDAwMDAwMDAzLjAwMDAwMDAwMS4qZ2NjLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCkdDQyA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL0dDQy8xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiR0NDLzEyLjMu
+_ModuleTable005_=MCIsCmxvYWRPcmRlciA9IDM0LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSA0LApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIkdDQy8xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApHQ0Njb3JlID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9hbGwvR0NDY29yZS8xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiR0NDY29yZS8xMi4zLjAiLApsb2FkT3JkZXIgPSAxLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAzNCwKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJHQ0Njb3JlLzEyLjMuMCIsCndWID0g
+_ModuleTable006_=Il4wMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCklQeXRob24gPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL0lQeXRob24vOC4xNC4wLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIklQeXRob24vOC4xNC4wLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMjYsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDQsCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiSVB5dGhvbi84LjE0LjAtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDguMDAwMDAwMDE0LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIs
+_ModuleTable007_=Cn0sCkp1cHl0ZXJMYWIgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL0p1cHl0ZXJMYWIvNC4wLjUtR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiSnVweXRlckxhYi80LjAuNS1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDMyLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIkp1cHl0ZXJMYWIvNC4wLjUtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDQuMDAwMDAwMDAwLjAwMDAwMDAwNS4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApKdXB5dGVyTm90ZWJvb2sgPSB7CmZu
+_ModuleTable008_=ID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL0p1cHl0ZXJOb3RlYm9vay83LjAuMi1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJKdXB5dGVyTm90ZWJvb2svNy4wLjItR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAzMywKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJKdXB5dGVyTm90ZWJvb2svNy4wLjItR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDcuMDAwMDAwMDAwLjAwMDAwMDAwMi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApPcGVuQkxBUyA9IHsKZm4gPSAiL29wdC9zb2Z0
+_ModuleTable009_=d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL09wZW5CTEFTLzAuMy4yMy1HQ0MtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIk9wZW5CTEFTLzAuMy4yMy1HQ0MtMTIuMy4wIiwKbG9hZE9yZGVyID0gMzUsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVwdGggPSAzLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiT3BlbkJMQVMvMC4zLjIzLUdDQy0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDAuMDAwMDAwMDAzLjAwMDAwMDAyMy4qZ2NjLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCk9wZW5QR00gPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5l
+_ModuleTable010_=cmljL21vZHVsZXMvYWxsL09wZW5QR00vNS4yLjEyMi1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJPcGVuUEdNLzUuMi4xMjItR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAxNywKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDMsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJPcGVuUEdNLzUuMi4xMjItR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDUuMDAwMDAwMDAyLjAwMDAwMDEyMi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApPcGVuU1NMID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9hbGwv
+_ModuleTable011_=T3BlblNTTC8xLjEubHVhIiwKZnVsbE5hbWUgPSAiT3BlblNTTC8xLjEiLApsb2FkT3JkZXIgPSAxMSwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDIsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJPcGVuU1NMLzEuMSIsCndWID0gIjAwMDAwMDAwMS4wMDAwMDAwMDEuKnpmaW5hbCIsCn0sClB5WUFNTCA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvUHlZQU1MLzYuMC1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJQeVlBTUwvNi4wLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMjgsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVw
+_ModuleTable012_=dGggPSAyLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiUHlZQU1MLzYuMC1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwNi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApQeVpNUSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvUHlaTVEvMjUuMS4xLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIlB5Wk1RLzI1LjEuMS1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDI5LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIlB5Wk1RLzI1LjEu
+_ModuleTable013_=MS1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAyNS4wMDAwMDAwMDEuMDAwMDAwMDAxLipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sClB5dGhvbiA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL1B5dGhvbi8zLjExLjMtR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiUHl0aG9uLzMuMTEuMy1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDEyLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxNywKc3RhY2tEZXB0aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJQeXRob24vMy4xMS4zLUdDQ2NvcmUtMTIuMy4wIiwKd1Yg
+_ModuleTable014_=PSAiXjAwMDAwMDAzLjAwMDAwMDAxMS4wMDAwMDAwMDMuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKWyJQeXRob24tYnVuZGxlLVB5UEkiXSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL1B5dGhvbi1idW5kbGUtUHlQSS8yMDIzLjA2LUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIlB5dGhvbi1idW5kbGUtUHlQSS8yMDIzLjA2LUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMTYsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDMsCnN0YWNrRGVwdGggPSAyLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiUHl0aG9uLWJ1bmRsZS1Q
+_ModuleTable015_=eVBJLzIwMjMuMDYtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDIwMjMuMDAwMDAwMDA2LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sClNRTGl0ZSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL1NRTGl0ZS8zLjQyLjAtR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAiU1FMaXRlLzMuNDIuMC1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDgsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVwdGggPSAyLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiU1FMaXRlLzMuNDIuMC1HQ0Njb3JlLTEyLjMuMCIsCndWID0g
+_ModuleTable016_=Il4wMDAwMDAwMy4wMDAwMDAwNDIuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKWyJTY2lQeS1idW5kbGUiXSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvU2NpUHktYnVuZGxlLzIwMjMuMDctZ2ZiZi0yMDIzYS5sdWEiLApmdWxsTmFtZSA9ICJTY2lQeS1idW5kbGUvMjAyMy4wNy1nZmJmLTIwMjNhIiwKbG9hZE9yZGVyID0gNDAsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiU2NpUHktYnVuZGxlLzIwMjMuMDctZ2ZiZi0yMDIzYSIsCndWID0gIl4wMDAwMjAyMy4wMDAwMDAwMDcuKmdmYmYuKnpm
+_ModuleTable017_=aW5hbC0uMDAwMDAyMDIzLiphLip6ZmluYWwiLAp9LApUY2wgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbC9UY2wvOC42LjEzLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIlRjbC84LjYuMTMtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSA3LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMywKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIlRjbC84LjYuMTMtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDguMDAwMDAwMDA2LjAwMDAwMDAxMy4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApYWiA9
+_ModuleTable018_=IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL1haLzUuNC4yLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIlhaLzUuNC4yLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gOSwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMiwKc3RhY2tEZXB0aCA9IDIsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJYWi81LjQuMi1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwNS4wMDAwMDAwMDQuMDAwMDAwMDAyLipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sClplcm9NUSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYv
+_ModuleTable019_=eDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvWmVyb01RLzQuMy40LUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gIlplcm9NUS80LjMuNC1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDIwLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAyLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIlplcm9NUS80LjMuNC1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwNC4wMDAwMDAwMDMuMDAwMDAwMDA0LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCmJpbnV0aWxzID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9h
+_ModuleTable020_=bGwvYmludXRpbHMvMi40MC1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJiaW51dGlscy8yLjQwLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMywKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMiwKc3RhY2tEZXB0aCA9IDIsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJiaW51dGlscy8yLjQwLUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDAyLjAwMDAwMDA0MC4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApiemlwMiA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL2J6aXAyLzEuMC44LUdDQ2NvcmUtMTIuMy4wLmx1YSIs
+_ModuleTable021_=CmZ1bGxOYW1lID0gImJ6aXAyLzEuMC44LUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gNCwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDIsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJiemlwMi8xLjAuOC1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwMS4wMDAwMDAwMDAuMDAwMDAwMDA4LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCmNmZmkgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbC9jZmZpLzEuMTUuMS1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJjZmZpLzEuMTUuMS1HQ0Njb3Jl
+_ModuleTable022_=LTEyLjMuMCIsCmxvYWRPcmRlciA9IDEzLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gNCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImNmZmkvMS4xNS4xLUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDAxNS4wMDAwMDAwMDEuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKY3J5cHRvZ3JhcGh5ID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9hbGwvY3J5cHRvZ3JhcGh5LzQxLjAuMS1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJjcnlwdG9ncmFwaHkvNDEuMC4xLUdDQ2NvcmUtMTIuMy4w
+_ModuleTable023_=IiwKbG9hZE9yZGVyID0gMTQsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVwdGggPSAzLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAiY3J5cHRvZ3JhcGh5LzQxLjAuMS1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDA0MS4wMDAwMDAwMDAuMDAwMDAwMDAxLipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCmdmYmYgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbC9nZmJmLzIwMjNhLmx1YSIsCmZ1bGxOYW1lID0gImdmYmYvMjAyM2EiLApsb2FkT3JkZXIgPSAzOCwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0
+_ModuleTable024_=aCA9IDEsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJnZmJmLzIwMjNhIiwKd1YgPSAiXjAwMDAyMDIzLiphLip6ZmluYWwiLAp9LApoYXRjaGxpbmcgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbC9oYXRjaGxpbmcvMS4xOC4wLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gImhhdGNobGluZy8xLjE4LjAtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAyNCwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDMsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJoYXRjaGxpbmcvMS4xOC4wLUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDAx
+_ModuleTable025_=LjAwMDAwMDAxOC4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApbImp1cHl0ZXItc2VydmVyIl0gPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL2p1cHl0ZXItc2VydmVyLzIuNy4yLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gImp1cHl0ZXItc2VydmVyLzIuNy4yLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMzEsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDMsCnN0YWNrRGVwdGggPSAxLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAianVweXRlci1zZXJ2ZXIvMi43LjItR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDIu
+_ModuleTable026_=MDAwMDAwMDA3LjAwMDAwMDAwMi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApqdXB5dGVybG1vZCA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvanVweXRlcmxtb2QvNC4wLjMtR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAianVweXRlcmxtb2QvNC4wLjMtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSA0MSwKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJqdXB5dGVybG1vZC80LjAuMy1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIjAwMDAwMDAwNC4wMDAwMDAwMDAuMDAwMDAwMDAzLipn
+_ModuleTable027_=Y2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCmxpYmZmaSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL2xpYmZmaS8zLjQuNC1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJsaWJmZmkvMy40LjQtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAxMCwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDIsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJsaWJmZmkvMy40LjQtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDMuMDAwMDAwMDA0LjAwMDAwMDAwNC4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIu
+_ModuleTable028_=MDAwMDAwMDAzLip6ZmluYWwiLAp9LApsaWJyZWFkbGluZSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL2xpYnJlYWRsaW5lLzguMi1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJsaWJyZWFkbGluZS84LjItR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSA2LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAyLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImxpYnJlYWRsaW5lLzguMi1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwOC4wMDAwMDAwMDIuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwK
+_ModuleTable029_=bGlic29kaXVtID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvZ2VuZXJpYy9tb2R1bGVzL2FsbC9saWJzb2RpdW0vMS4wLjE4LUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gImxpYnNvZGl1bS8xLjAuMTgtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAxOCwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDMsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJsaWJzb2RpdW0vMS4wLjE4LUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDAwMC4wMDAwMDAwMTguKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKbGlieG1sMiA9IHsK
+_ModuleTable030_=Zm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL2xpYnhtbDIvMi4xMS40LUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gImxpYnhtbDIvMi4xMS40LUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMjEsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDIsCnN0YWNrRGVwdGggPSAzLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAibGlieG1sMi8yLjExLjQtR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDIuMDAwMDAwMDExLjAwMDAwMDAwNC4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApsaWJ4c2x0ID0gewpmbiA9ICIvb3B0L3NvZnR3YXJl
+_ModuleTable031_=LWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvZ2VuZXJpYy9tb2R1bGVzL2FsbC9saWJ4c2x0LzEuMS4zOC1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJsaWJ4c2x0LzEuMS4zOC1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDIyLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMywKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImxpYnhzbHQvMS4xLjM4LUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDAxLjAwMDAwMDAwMS4wMDAwMDAwMzguKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKbGlieWFtbCA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2
+_ModuleTable032_=XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvbGlieWFtbC8wLjIuNS1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJsaWJ5YW1sLzAuMi41LUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMjcsCnByb3BUID0ge30sCnJlZl9jb3VudCA9IDEsCnN0YWNrRGVwdGggPSAzLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAibGlieWFtbC8wLjIuNS1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwMC4wMDAwMDAwMDIuMDAwMDAwMDA1LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCmx4bWwgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL2x4
+_ModuleTable033_=bWwvNC45LjItR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAibHhtbC80LjkuMi1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9IDIzLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gImx4bWwvNC45LjItR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDQuMDAwMDAwMDA5LjAwMDAwMDAwMi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApuY3Vyc2VzID0gewpmbiA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9hbGwvbmN1cnNlcy82LjQtR0NDY29yZS0xMi4zLjAubHVhIiwK
+_ModuleTable034_=ZnVsbE5hbWUgPSAibmN1cnNlcy82LjQtR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSA1LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAzLApzdGFja0RlcHRoID0gMywKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIm5jdXJzZXMvNi40LUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDA2LjAwMDAwMDAwNC4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApweWJpbmQxMSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwvcHliaW5kMTEvMi4xMS4xLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gInB5YmluZDExLzIuMTEuMS1HQ0Njb3Jl
+_ModuleTable035_=LTEyLjMuMCIsCmxvYWRPcmRlciA9IDM5LApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMSwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInB5YmluZDExLzIuMTEuMS1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwMi4wMDAwMDAwMTEuMDAwMDAwMDAxLipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCnRvcm5hZG8gPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9nZW5lcmljL21vZHVsZXMvYWxsL3Rvcm5hZG8vNi4zLjItR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAidG9ybmFkby82LjMuMi1HQ0Njb3JlLTEyLjMuMCIsCmxvYWRPcmRlciA9
+_ModuleTable036_=IDMwLApwcm9wVCA9IHt9LApyZWZfY291bnQgPSAxLApzdGFja0RlcHRoID0gMiwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInRvcm5hZG8vNi4zLjItR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDYuMDAwMDAwMDAzLjAwMDAwMDAwMi4qZ2NjY29yZS4qemZpbmFsLS4wMDAwMDAwMTIuMDAwMDAwMDAzLip6ZmluYWwiLAp9LApbInV0aWwtbGludXgiXSA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL3V0aWwtbGludXgvMi4zOS1HQ0Njb3JlLTEyLjMuMC5sdWEiLApmdWxsTmFtZSA9ICJ1dGlsLWxpbnV4LzIuMzktR0NDY29yZS0xMi4zLjAiLApsb2FkT3JkZXIgPSAxOSwKcHJvcFQg
+_ModuleTable037_=PSB7fSwKcmVmX2NvdW50ID0gMSwKc3RhY2tEZXB0aCA9IDMsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ1dGlsLWxpbnV4LzIuMzktR0NDY29yZS0xMi4zLjAiLAp3ViA9ICJeMDAwMDAwMDIuMDAwMDAwMDM5LipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCnZpcnR1YWxlbnYgPSB7CmZuID0gIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbC92aXJ0dWFsZW52LzIwLjIzLjEtR0NDY29yZS0xMi4zLjAubHVhIiwKZnVsbE5hbWUgPSAidmlydHVhbGVudi8yMC4yMy4xLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMTUsCnByb3BUID0ge30sCnJlZl9jb3VudCA9
+_ModuleTable038_=IDEsCnN0YWNrRGVwdGggPSAzLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAidmlydHVhbGVudi8yMC4yMy4xLUdDQ2NvcmUtMTIuMy4wIiwKd1YgPSAiXjAwMDAwMDIwLjAwMDAwMDAyMy4wMDAwMDAwMDEuKmdjY2NvcmUuKnpmaW5hbC0uMDAwMDAwMDEyLjAwMDAwMDAwMy4qemZpbmFsIiwKfSwKemxpYiA9IHsKZm4gPSAiL29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMuMDYveDg2XzY0L2FtZC96ZW4yL21vZHVsZXMvYWxsL3psaWIvMS4yLjEzLUdDQ2NvcmUtMTIuMy4wLmx1YSIsCmZ1bGxOYW1lID0gInpsaWIvMS4yLjEzLUdDQ2NvcmUtMTIuMy4wIiwKbG9hZE9yZGVyID0gMiwKcHJvcFQgPSB7fSwKcmVmX2NvdW50ID0gNiwKc3RhY2tEZXB0aCA9IDMsCnN0YXR1
+_ModuleTable039_=cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ6bGliLzEuMi4xMy1HQ0Njb3JlLTEyLjMuMCIsCndWID0gIl4wMDAwMDAwMS4wMDAwMDAwMDIuMDAwMDAwMDEzLipnY2Njb3JlLip6ZmluYWwtLjAwMDAwMDAxMi4wMDAwMDAwMDMuKnpmaW5hbCIsCn0sCn0sCm1wYXRoQSA9IHsKIi9vcHQvc29mdHdhcmUtY3VycmVudC8yMDIzLjA2L3g4Nl82NC9hbWQvemVuMi9tb2R1bGVzL2FsbCIsICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvZ2VuZXJpYy9tb2R1bGVzL2FsbCIsCn0sCnN5c3RlbUJhc2VNUEFUSCA9ICIvb3B0L3NvZnR3YXJlLWN1cnJlbnQvMjAyMy4wNi94ODZfNjQvYW1kL3plbjIvbW9kdWxlcy9hbGw6L29wdC9zb2Z0d2FyZS1jdXJyZW50LzIwMjMu
+_ModuleTable040_=MDYveDg2XzY0L2dlbmVyaWMvbW9kdWxlcy9hbGwiLAp9Cg==
+_ModuleTable_Sz_=40
+ nc -w 2 "$1" "$2" < /dev/null > /dev/null 2>&1
+NOTEBOOK_ROOT=/mnt/home/behren23
+OLDPWD=/mnt/home/behren23/ondemand/data/sys/dashboard/batch_connect/sys/bc_icer_jupyter_ubuntu/output/46903791-c126-4600-9693-66513f258559
+OMPI_MCA_btl_openib_btls_per_lid=8
+OMPI_MCA_plm_slurm_args=--external-launcher
+PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/nvvm/bin:/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/bin:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/bin:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/sbin:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/bin:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/hpcc/bin:/usr/lpp/mmfs/bin:/opt/puppetlabs/bin
+PBS_NODEFILE=/tmp/nodefiles/467061
+PKG_CONFIG_PATH=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/share/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenBLAS/0.3.23-GCC-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/libyaml/0.2.5-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/libsodium/1.0.18-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/generic/software/OpenPGM/5.2.122-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/bzip2/1.0.8-GCCcore-12.3.0/lib/pkgconfig:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/lib/pkgconfig
+port=54247
+ port_status=$?;
+ port_status=$?;
+ port_used "${port}";
+ port_used "${port}";
+PROFILEREAD=true
+PRTE_MCA_plm_slurm_args=--external-launcher
+PWD=/mnt/home/behren23
+ python3 -c "import socket; socket.socket().connect(('$1',$2))" > /dev/null 2>&1
+ python -c "import socket; socket.socket().connect(('$1',$2))" > /dev/null 2>&1
+PYTHONPATH=/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/SciPy-bundle/2023.07-gfbf-2023a/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/tornado/6.3.2-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/PyZMQ/25.1.1-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/PyYAML/6.0-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/BeautifulSoup/4.12.2-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/hatchling/1.18.0-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/generic/software/lxml/4.9.2-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python-bundle-PyPI/2023.06-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/virtualenv/20.23.1-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/cryptography/41.0.1-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/cffi/1.15.1-GCCcore-12.3.0/lib/python3.11/site-packages:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/easybuild/python
+ return $__lmod_my_status
+ return $status;
+ return $status;
+ return 0;
+ return 0;
+ return 0;
+ return 0;
+ return 1
+ return 1
+ return 1
+ return 1
+ return 127
+ return 127
+ return 127;
+ return 127;
+ return 127;
+SC15=/mnt/ls15/scratch/users/behren23
+SC18=/mnt/gs18/scratch/users/behren23
+SC21=/mnt/gs21/scratch/behren23
+SCRATCH=/mnt/gs21/scratch/behren23
+ set +$__lmod_sh_dbg;
+ set -$__lmod_sh_dbg;
+SHELL=/bin/bash
+SHLVL=2
+ shuf -i ${1}-${2} -n 1
+ sleep 0.5;
+ sleep 0.5;
+SLURM_CLUSTER_NAME=msuhpcc
+SLURM_CONF=/etc/slurm/slurm.conf
+SLURM_CPUS_ON_NODE=1
+SLURM_CPUS_PER_TASK=1
+SLURMD_NODENAME=amr-186
+SLURM_EXPORT_ENV=ALL
+SLURM_GET_USER_ENV=1
+SLURM_GTIDS=0
+SLURM_JOB_ACCOUNT=general
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_JOB_END_TIME=1769061964
+SLURM_JOB_GID=3370
+SLURM_JOB_ID=467061
+SLURM_JOBID=467061
+SLURM_JOB_NAME=ondemand/sys/dashboard/sys/bc_icer_jupyter_ubuntu
+SLURM_JOB_NODELIST=amr-186
+SLURM_JOB_NUM_NODES=1
+SLURM_JOB_PARTITION=ondemand
+SLURM_JOB_QOS=behren23
+SLURM_JOB_START_TIME=1769058364
+SLURM_JOB_UID=808970
+SLURM_JOB_USER=behren23
+SLURM_LOCALID=0
+SLURM_MEM_PER_NODE=2048
+SLURM_NNODES=1
+SLURM_NODEID=0
+SLURM_NODELIST=amr-186
+SLURM_OOM_KILL_STEP=0
+SLURM_PRIO_PROCESS=0
+SLURM_PROCID=0
+SLURM_SCRIPT_CONTEXT=prolog_task
+SLURM_SUBMIT_DIR=/var/www/ood/apps/sys/dashboard
+SLURM_SUBMIT_HOST=openondemand-03
+SLURM_TASK_PID=3454553
+SLURM_TASKS_PER_NODE=1
+SLURM_TOPOLOGY_ADDR=amr-186
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_TRES_PER_TASK=cpu=1
+SQUEUE_ALL=
+ status=$?;
+ status=$?;
+ tr -cd 'a-zA-Z0-9' < /dev/urandom 2> /dev/null | head -c${1:-8}
+ unset __lmod_sh_dbg;
+USER=behren23
+_=/usr/bin/env
+ *v*)
+ *v*x*)
+ *x*)
+XDG_DATA_DIRS=/opt/software-current/2023.06/x86_64/generic/software/CUDA/12.6.0/share:/opt/software-current/2023.06/x86_64/generic/software/jupyterlmod/4.0.3-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/pybind11/2.11.1-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/FFTW/3.3.10-GCC-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/FlexiBLAS/3.3.1-GCC-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/JupyterNotebook/7.0.2-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/jupyter-server/2.7.2-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/IPython/8.14.0-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/libxslt/1.1.38-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/libxml2/2.11.4-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/generic/software/ZeroMQ/4.3.4-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/util-linux/2.39-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/Python/3.11.3-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/OpenSSL/1.1/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/libffi/3.4.4-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/XZ/5.4.2-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/SQLite/3.42.0-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/Tcl/8.6.13-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/libreadline/8.2-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/ncurses/6.4-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/binutils/2.40-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/zlib/1.2.13-GCCcore-12.3.0/share:/opt/software-current/2023.06/x86_64/amd/zen2/software/GCCcore/12.3.0/share:/usr/share/gnome:/usr/local/share:/usr/share
++ module list
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Currently Loaded Modules:
+  1) GCCcore/12.3.0
+  2) zlib/1.2.13-GCCcore-12.3.0
+  3) binutils/2.40-GCCcore-12.3.0
+  4) bzip2/1.0.8-GCCcore-12.3.0
+  5) ncurses/6.4-GCCcore-12.3.0
+  6) libreadline/8.2-GCCcore-12.3.0
+  7) Tcl/8.6.13-GCCcore-12.3.0
+  8) SQLite/3.42.0-GCCcore-12.3.0
+  9) XZ/5.4.2-GCCcore-12.3.0
+ 10) libffi/3.4.4-GCCcore-12.3.0
+ 11) OpenSSL/1.1
+ 12) Python/3.11.3-GCCcore-12.3.0
+ 13) cffi/1.15.1-GCCcore-12.3.0
+ 14) cryptography/41.0.1-GCCcore-12.3.0
+ 15) virtualenv/20.23.1-GCCcore-12.3.0
+ 16) Python-bundle-PyPI/2023.06-GCCcore-12.3.0
+ 17) OpenPGM/5.2.122-GCCcore-12.3.0
+ 18) libsodium/1.0.18-GCCcore-12.3.0
+ 19) util-linux/2.39-GCCcore-12.3.0
+ 20) ZeroMQ/4.3.4-GCCcore-12.3.0
+ 21) libxml2/2.11.4-GCCcore-12.3.0
+ 22) libxslt/1.1.38-GCCcore-12.3.0
+ 23) lxml/4.9.2-GCCcore-12.3.0
+ 24) hatchling/1.18.0-GCCcore-12.3.0
+ 25) BeautifulSoup/4.12.2-GCCcore-12.3.0
+ 26) IPython/8.14.0-GCCcore-12.3.0
+ 27) libyaml/0.2.5-GCCcore-12.3.0
+ 28) PyYAML/6.0-GCCcore-12.3.0
+ 29) PyZMQ/25.1.1-GCCcore-12.3.0
+ 30) tornado/6.3.2-GCCcore-12.3.0
+ 31) jupyter-server/2.7.2-GCCcore-12.3.0
+ 32) JupyterLab/4.0.5-GCCcore-12.3.0
+ 33) JupyterNotebook/7.0.2-GCCcore-12.3.0
+ 34) GCC/12.3.0
+ 35) OpenBLAS/0.3.23-GCC-12.3.0
+ 36) FlexiBLAS/3.3.1-GCC-12.3.0
+ 37) FFTW/3.3.10-GCC-12.3.0
+ 38) gfbf/2023a
+ 39) pybind11/2.11.1-GCCcore-12.3.0
+ 40) SciPy-bundle/2023.07-gfbf-2023a
+ 41) jupyterlmod/4.0.3-GCCcore-12.3.0
+ 42) CUDA/12.6.0
+
+ 
+
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ jupyter lab --config=/mnt/home/behren23/ondemand/data/sys/dashboard/batch_connect/sys/bc_icer_jupyter_ubuntu/output/46903791-c126-4600-9693-66513f258559/config.py
+[I 2026-01-22 00:06:16.610 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2026-01-22 00:06:16.626 ServerApp] Package jupyter_lsp took 0.0162s to import
+[W 2026-01-22 00:06:16.626 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-01-22 00:06:16.633 ServerApp] Package jupyter_server_terminals took 0.0070s to import
+[I 2026-01-22 00:06:16.636 ServerApp] Package jupyterlmod took 0.0026s to import
+[I 2026-01-22 00:06:16.636 ServerApp] Package notebook took 0.0000s to import
+[I 2026-01-22 00:06:16.638 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2026-01-22 00:06:16.638 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-01-22 00:06:16.638 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-01-22 00:06:16.643 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2026-01-22 00:06:16.645 LabApp] 'ip' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'port' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'port_retries' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.645 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.646 LabApp] 'notebook_dir' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.646 LabApp] 'disable_check_xsrf' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-01-22 00:06:16.648 ServerApp] ServerApp.password config is deprecated in 2.0. Use PasswordIdentityProvider.hashed_password.
+[W 2026-01-22 00:06:16.648 ServerApp] notebook_dir is deprecated, use root_dir
+[I 2026-01-22 00:06:16.648 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-01-22 00:06:16.648 ServerApp] jupyterlmod | extension was successfully linked.
+[I 2026-01-22 00:06:16.654 ServerApp] notebook | extension was successfully linked.
+[I 2026-01-22 00:06:16.657 ServerApp] Writing Jupyter server cookie secret to /mnt/ffs24/home/behren23/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2026-01-22 00:06:16.838 ServerApp] notebook_shim | extension was successfully linked.
+[W 2026-01-22 00:06:16.864 ServerApp] WARNING: The Jupyter server is listening on all IP addresses and not using encryption. This is not recommended.
+[I 2026-01-22 00:06:16.865 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-01-22 00:06:16.867 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-01-22 00:06:16.869 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-01-22 00:06:16.880 LabApp] JupyterLab extension loaded from /opt/software-current/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/lib/python3.11/site-packages/jupyterlab
+[I 2026-01-22 00:06:16.880 LabApp] JupyterLab application directory is /cvmfs/ubuntu_2204.icer.msu.edu/2023.06/x86_64/generic/software/JupyterLab/4.0.5-GCCcore-12.3.0/share/jupyter/lab
+[I 2026-01-22 00:06:16.881 LabApp] Extension Manager is 'pypi'.
+[I 2026-01-22 00:06:16.883 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-01-22 00:06:16.883 ServerApp] Loading lmod extension
+[I 2026-01-22 00:06:16.884 ServerApp] jupyterlmod | extension was successfully loaded.
+[I 2026-01-22 00:06:16.890 ServerApp] notebook | extension was successfully loaded.
+[I 2026-01-22 00:06:16.890 ServerApp] Serving notebooks from local directory: /mnt/home/behren23
+[I 2026-01-22 00:06:16.890 ServerApp] Jupyter Server 2.7.2 is running at:
+[I 2026-01-22 00:06:16.890 ServerApp] http://localhost:54247/node/amr-186/54247/lab
+[I 2026-01-22 00:06:16.891 ServerApp]     http://127.0.0.1:54247/node/amr-186/54247/lab
+[I 2026-01-22 00:06:16.891 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2026-01-22 00:06:16.899 ServerApp] No web browser found: Error('could not locate runnable browser').
+[I 2026-01-22 00:06:16.943 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+Discovered Jupyter server listening on port 54247!
+Generating connection YAML file...
+[I 2026-01-22 00:06:45.198 ServerApp] User 9114da16f49c4ea29c28854260a71c8f logged in.
+[I 2026-01-22 00:06:45.213 ServerApp] 302 POST /node/amr-186/54247/login (9114da16f49c4ea29c28854260a71c8f@172.16.93.117) 15.25ms
+[I 2026-01-22 00:06:45.354 ServerApp] 302 GET /node/amr-186/54247/ (@172.16.93.117) 0.26ms
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[W 2026-01-22 00:06:50.671 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2026-01-22 00:06:51.124 ServerApp] 404 GET /node/amr-186/54247/server-proxy/servers-info (9114da16f49c4ea29c28854260a71c8f@172.16.93.117) 19.46ms referer=https://ondemand.hpcc.msu.edu/node/amr-186/54247/lab?
+[I 2026-01-22 00:07:00.703 ServerApp] Creating new notebook in 
+[I 2026-01-22 00:07:00.799 ServerApp] Writing notebook-signing key to /mnt/ffs24/home/behren23/.local/share/jupyter/notebook_secret
+[I 2026-01-22 00:07:01.689 ServerApp] Kernel started: 1107558c-e102-4700-a18c-3cff68f7aadc
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[I 2026-01-22 00:07:02.655 ServerApp] Connecting to kernel 1107558c-e102-4700-a18c-3cff68f7aadc.
+[I 2026-01-22 00:07:03.162 ServerApp] Starting buffering for 1107558c-e102-4700-a18c-3cff68f7aadc:7ccc12c4-fbd1-4cd7-a21c-f3957cd7f8d3
+[I 2026-01-22 00:07:03.514 ServerApp] Connecting to kernel 1107558c-e102-4700-a18c-3cff68f7aadc.
+[I 2026-01-22 00:07:04.423 ServerApp] Connecting to kernel 1107558c-e102-4700-a18c-3cff68f7aadc.
+[I 2026-01-22 00:09:01.619 ServerApp] Saving file at /Untitled.ipynb
+[2026-01-22T00:09:56.084] error: *** JOB 467061 ON amr-186 CANCELLED AT 2026-01-22T00:09:56 DUE to SIGNAL Terminated ***
