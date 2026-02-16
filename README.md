@@ -12,8 +12,9 @@ This repository contains tools and workflows for **protein structure prediction*
 2. [DPFunc — Protein Function Prediction](#2-dpfunc--protein-function-prediction)
 3. [OnionNet — Protein-Ligand Binding Affinity (CNN)](#3-onionnet--protein-ligand-binding-affinity-cnn)
 4. [aSAM (sam2) — Conformational Ensemble Generation](#4-asam-sam2--conformational-ensemble-generation)
-5. [Analysis Scripts](#5-analysis-scripts)
-6. [Repository Structure](#6-repository-structure)
+5. [BioEmu — Protein Equilibrium Ensemble Sampling](#5-bioemu--protein-equilibrium-ensemble-sampling)
+6. [Analysis Scripts](#6-analysis-scripts)
+7. [Repository Structure](#7-repository-structure)
 
 ---
 
@@ -337,7 +338,127 @@ python scripts/generate_ensemble.py \
 
 ---
 
-## 5. Analysis Scripts
+## 5. BioEmu — Protein Equilibrium Ensemble Sampling
+
+**Location:** `Bioengineering/bioemu/`
+
+BioEmu (Biomolecular Emulator) is a generative model from Microsoft Research that samples from the approximated equilibrium distribution of protein structures given an amino acid sequence. It generates backbone conformational ensembles that approximate molecular dynamics simulations.
+
+- **Paper:** Lewis et al., *Science* 2025 — [DOI:10.1126/science.adv9817](https://www.science.org/doi/10.1126/science.adv9817)
+- **Model Weights:** [HuggingFace (microsoft/bioemu)](https://huggingface.co/microsoft/bioemu)
+- **GitHub:** <https://github.com/microsoft/bioemu>
+
+### 5.1 Installation
+
+```bash
+pip install bioemu
+```
+
+> **Note:** The first time BioEmu runs, it will set up [ColabFold](https://github.com/sokrypton/ColabFold) in `~/.bioemu_colabfold` for MSA/embedding generation. Set `BIOEMU_COLABFOLD_DIR` to change the location.
+
+### 5.2 Basic Sampling
+
+```bash
+# Request a GPU session
+salloc --gpus=v100:1 --mem=64G --time=03:00:00
+
+# Quick test with a small peptide
+python -m bioemu.sample --sequence GYDPETGTWG --num_samples 10 --output_dir ~/test-chignolin
+```
+
+Or pass a FASTA file:
+
+```bash
+python -m bioemu.sample \
+    --sequence sequence.fasta \
+    --num_samples 50 \
+    --output_dir ~/bioemu_results/my_protein
+```
+
+Python API:
+
+```python
+from bioemu.sample import main as sample
+sample(sequence='GYDPETGTWG', num_samples=10, output_dir='~/test_chignolin')
+```
+
+Model weights are automatically downloaded from HuggingFace on first use.
+
+### 5.3 Steering (Reduce Unphysical Structures)
+
+BioEmu includes a Sequential Monte Carlo (SMC) steering system to reduce chain breaks and steric clashes:
+
+```bash
+python -m bioemu.sample \
+    --sequence GYDPETGTWG \
+    --num_samples 100 \
+    --output_dir ~/steered-samples \
+    --steering_config src/bioemu/config/steering/physical_steering.yaml \
+    --denoiser_config src/bioemu/config/denoiser/stochastic_dpm.yaml
+```
+
+**Available steering potentials:**
+
+| Potential | Description |
+|-----------|-------------|
+| ChainBreak | Prevents backbone discontinuities |
+| ChainClash | Avoids steric clashes between non-neighboring residues |
+| DisulfideBridge | Encourages disulfide bond formation between cysteine pairs |
+
+### 5.4 Side-Chain Reconstruction & MD Relaxation
+
+```bash
+# Install optional dependencies
+pip install bioemu[md]
+
+# Reconstruct side-chains and run energy minimization
+python -m bioemu.sidechain_relax --pdb-path path/to/topology.pdb --xtc-path path/to/samples.xtc
+```
+
+Options:
+- `--no-md-equil` — side-chain reconstruction only, skip MD
+- `--md-protocol nvt_equil` — run a short 0.1 ns NVT equilibration
+
+### 5.5 Model Checkpoints
+
+| Checkpoint | Description |
+|------------|-------------|
+| `bioemu-v1.0` | Preprint weights |
+| `bioemu-v1.1` | Published *Science* paper weights (default) |
+| `bioemu-v1.2` | Extended training with experimental folding free energies |
+
+Select a specific checkpoint:
+
+```bash
+python -m bioemu.sample --model_name bioemu-v1.1 --sequence ... --num_samples 50 --output_dir ...
+```
+
+### 5.6 Output
+
+Results are saved to the specified `--output_dir`:
+
+| File | Description |
+|------|-------------|
+| `samples.xtc` | Trajectory of sampled conformations |
+| `sequence.fasta` | Input protein sequence |
+| `topology.pdb` | Topology for parsing the XTC file |
+| `batch_*.npz` | Raw sample batches (backbone frames) |
+
+By default, unphysical structures (clashes/chain breaks) are filtered out. Use `--filter_samples=False` to keep all.
+
+### 5.7 Sampling Times (A100 GPU, 80 GB VRAM)
+
+| Sequence Length | Time (1000 samples) |
+|----------------:|--------------------:|
+| 100 | ~4 min |
+| 300 | ~40 min |
+| 600 | ~150 min |
+
+> **Note:** Very long sequences (>600 residues) may require `batch_size=1` and significantly more time.
+
+---
+
+## 6. Analysis Scripts
 
 **Location:** `Bioengineering/scripts/`
 
@@ -366,7 +487,7 @@ python scripts/ensemble_comparison.py \
 
 ---
 
-## 6. Repository Structure
+## 7. Repository Structure
 
 ```
 CHE891_Classwork/
@@ -391,6 +512,8 @@ CHE891_Classwork/
 │   │   ├── config/          # Model YAML configs
 │   │   ├── scripts/         # Inference scripts
 │   │   └── sam/             # Core library
+│   ├── bioemu/              # BioEmu equilibrium ensemble sampling
+│   │   └── src/bioemu/      # Core library & configs
 │   ├── bioemur__results/    # BioEmu ensemble results (XTC/NPZ)
 │   └── scripts/             # Analysis & comparison scripts
 └── README.md
