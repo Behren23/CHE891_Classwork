@@ -1,0 +1,189 @@
+# Boltz Binding Affinity Prediction
+# ==================================
+# Use Boltz to predict protein-ligand binding affinity
+
+# ============================================
+# STEP 1: Request an interactive GPU session
+# ============================================
+salloc --gpus=v100:1 --mem=64G --time=03:00:00
+
+# Once the node changes (e.g., behren23@nvl-xxx), check if GPU is ready
+nvidia-smi
+
+# ============================================
+# STEP 2: Set up the environment
+# ============================================
+source /etc/profile.d/modules.sh
+module load Python/3.11.3
+cd ~/boltz
+source .venv_clean/bin/activate
+
+# ============================================
+# STEP 3: Prepare your input YAML files
+# ============================================
+# Each YAML file should contain:
+# - A protein sequence
+# - A ligand (SMILES string)
+#
+# Example YAML format (save as my_ligand.yaml):
+# -------------------------------------------
+# version: 1
+# 
+# sequences:
+# 
+#   - protein:
+# 
+#       id: P
+# 
+#       sequence: YOUR_PROTEIN_SEQUENCE_HERE
+# 
+#       msa: empty
+# 
+#   - ligand:
+# 
+#       id: L
+# 
+#       smiles: 'YOUR_SMILES_STRING_HERE'
+# 
+# properties:
+# -------------------------------------------
+
+# ============================================
+# STEP 4: Run Boltz prediction (single file)
+# ============================================
+boltz predict my_ligand.yaml --use_msa_server --output_format pdb
+
+# ============================================
+# STEP 5: Run Boltz prediction (multiple files)
+# ============================================
+# Option A: Run on all YAML files in a folder
+for yaml in "ligand yaml files"/*.yaml; do
+    echo "Processing: $yaml"
+    boltz predict "$yaml" --use_msa_server --output_format pdb
+done
+
+# Option B: Run on specific files
+boltz predict ligand1.yaml --use_msa_server --output_format pdb
+boltz predict ligand2.yaml --use_msa_server --output_format pdb
+
+# ============================================
+# STEP 6: Locate output files
+# ============================================
+# Results are saved in: boltz_results_<ligand_name>/predictions/<ligand_name>/
+#
+# Key output files:
+# - affinity_<name>.json          <- BINDING AFFINITY VALUES
+# - confidence_<name>_model_0.json <- Model confidence scores
+# - <name>_model_0.pdb            <- 3D structure of complex
+# - pae_<name>_model_0.npz        <- Predicted aligned error
+# - plddt_<name>_model_0.npz      <- Per-residue confidence
+
+# View affinity results for a single prediction:
+cat boltz_results_<ligand_name>/predictions/<ligand_name>/affinity_<ligand_name>.json
+
+# ============================================
+# STEP 7: Understanding affinity output
+# ============================================
+# The affinity JSON contains:
+# {
+#     "affinity_pred_value": 1.43,        # Predicted pKd (higher = stronger binding)
+#     "affinity_probability_binary": 0.18, # Probability of binding (0-1)
+#     "affinity_pred_value1": 0.74,        # Model 1 prediction
+#     "affinity_pred_value2": 2.11         # Model 2 prediction
+# }
+#
+# Interpretation:
+# - pKd > 1.5: Strong binding
+# - pKd 0.5-1.5: Moderate binding
+# - pKd < 0.5: Weak binding
+# - pKd < 0: Non-binder
+
+# ============================================
+# STEP 8: Extract all affinity values to Excel
+# ============================================
+python3 << 'EOF'
+import json
+from pathlib import Path
+import pandas as pd
+
+# Find all affinity JSON files
+affinity_files = list(Path('.').rglob('affinity_*.json'))
+print(f"Found {len(affinity_files)} affinity files")
+
+results = []
+for f in affinity_files:
+    try:
+        with open(f) as fp:
+            data = json.load(fp)
+        ligand_name = f.stem.replace('affinity_', '')
+        results.append({
+            'Ligand': ligand_name,
+            'pKd (Affinity)': data.get('affinity_pred_value', 0),
+            'Binding Probability': data.get('affinity_probability_binary', 0),
+            'pKd Model 1': data.get('affinity_pred_value1', 0),
+            'pKd Model 2': data.get('affinity_pred_value2', 0),
+        })
+    except Exception as e:
+        print(f"Error reading {f}: {e}")
+
+# Create DataFrame and sort by affinity (descending)
+df = pd.DataFrame(results)
+df = df.sort_values('pKd (Affinity)', ascending=False).reset_index(drop=True)
+df.index = df.index + 1
+df.index.name = 'Rank'
+
+# Save to Excel
+df.to_excel('binding_affinity_results.xlsx')
+print(f"Saved to: binding_affinity_results.xlsx")
+EOF
+
+# ============================================
+# STEP 9: Print ranked table to terminal
+# ============================================
+python3 << 'EOF'
+import json
+from pathlib import Path
+
+affinity_files = list(Path('.').rglob('affinity_*.json'))
+results = []
+for f in affinity_files:
+    with open(f) as fp:
+        data = json.load(fp)
+    ligand = f.stem.replace('affinity_', '')
+    results.append((ligand, data.get('affinity_pred_value', 0), data.get('affinity_probability_binary', 0)))
+
+results.sort(key=lambda x: x[1], reverse=True)
+print(f"{'Rank':<5} {'Ligand':<30} {'pKd':<10} {'Prob':<10}")
+print("="*60)
+for i, (lig, pkd, prob) in enumerate(results, 1):
+    print(f"{i:<5} {lig:<30} {pkd:<10.3f} {prob:<10.3f}")
+EOF
+
+# ============================================
+# USEFUL OPTIONS
+# ============================================
+# --output_format pdb     Use PDB format instead of mmCIF
+# --recycling_steps 3     Number of structure refinement cycles
+# --diffusion_samples 1   Number of structure samples to generate
+# --override              Overwrite existing predictions
+
+# ============================================
+# EXAMPLE: Complete workflow
+# ============================================
+# 1. Prepare YAML files in "ligand yaml files/" folder
+# 2. Request GPU: salloc --gpus=v100:1 --mem=64G --time=03:00:00
+# 3. Activate env: source .venv_clean/bin/activate
+# 4. Run predictions: for yaml in "ligand yaml files"/*.yaml; do boltz predict "$yaml" --use_msa_server --output_format pdb; done
+# 5. Extract results: python3 extract_affinities.py
+
+# ============================================
+# TROUBLESHOOTING
+# ============================================
+# Error: "libpython3.11.so.1.0: cannot open shared object file"
+# Fix: module load Python/3.11.3
+
+# Error: "No module named 'openpyxl'"
+# Fix: pip install openpyxl
+
+# Error: MSA server timeout
+# Fix: Retry or use local MSA (remove --use_msa_server)

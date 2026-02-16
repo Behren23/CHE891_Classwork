@@ -1,0 +1,28 @@
+name: mf
+mlb: ./mlb/mf_go.mlb
+results: ./results
+
+base:
+  interpro_whole: ./dpfunc_prediction_RIXI/interpro_{}.pkl
+
+train:
+  name: train
+  pid_list_file: ./data/mf_train_used_pid_list.pkl
+  pid_go_file: ./data/mf_train_go.txt
+  pid_pdb_file: ./data/PDB/graph_feature/mf_train_whole_pdb_part{}.pkl
+  train_file_count: 7
+  interpro_file: ./data/mf_train_interpro.pkl
+
+valid:
+  name: valid
+  pid_list_file: ./data/mf_test1_used_pid_list.pkl
+  pid_go_file: ./data/mf_test1_go.txt
+  pid_pdb_file: ./data/PDB/graph_feature/mf_test1_whole_pdb_part0.pkl
+  interpro_file: ./data/mf_test1_interpro.pkl
+  
+test:
+  name: test
+  pid_list_file: ./dpfunc_prediction_RIXI/pid_list.pkl
+  pid_go_file: ./dpfunc_prediction_RIXI/protein_go.txt
+  pid_pdb_file: ./dpfunc_prediction_RIXI/graph_RIXI.pkl
+  interpro_file: ./dpfunc_prediction_RIXI/interpro_RIXI.pkl

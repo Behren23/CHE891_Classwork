@@ -1,0 +1,28 @@
+# ---- Virtual environments (contain large binaries, not needed in repo) ----
+Bioengineering/DPFunc/dpfunc_env/
+Bioengineering/bioemu_env/
+
+# ---- Large model weights (>100 MB) ----
+Bioengineering/onionnet/models/CNN_final_model_weights.h5
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+# ---- Jupyter Notebooks ----
+.ipynb_checkpoints/
+
+# ---- OS files ----
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# ---- Caches ----
+*.cache
+Bioengineering/batch_connect/cache/
+Bioengineering/sampling_so3_cache/

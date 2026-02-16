@@ -1,0 +1,162 @@
+# OnionNet - Protein-Ligand Binding Affinity Prediction
+# ======================================================
+# Uses multi-layer inter-molecular contact features with CNN
+# https://github.com/zhenglz/onionnet
+
+# ============================================
+# STEP 1: Set up the environment
+# ============================================
+source /etc/profile.d/modules.sh
+module load Python/3.11.3
+cd ~/onionnet
+source .venv/bin/activate
+
+# ============================================
+# STEP 2: Prepare protein-ligand complex PDB files
+# ============================================
+# Requirements:
+# - Protein and ligand must be in the SAME PDB file
+# - Ligand residue name must be "LIG" (3-letter code, column 18-20)
+# - Use tools/prepare_complex.sh to combine files:
+#
+# bash tools/prepare_complex.sh protein.pdb ligand.mol2.pdb complex.pdb
+
+# Convert ligand to PDB format if needed:
+# pip install openbabel-wheel
+# obabel ligand.mol2 -O ligand.pdb
+
+# ============================================
+# STEP 3: Create input file listing complexes
+# ============================================
+# Create a text file listing all complex PDB files (one per line)
+# Example: input_complexes.dat
+# ---------------------------
+# complex1/complex1.pdb
+# complex2/complex2.pdb
+# complex3/complex3.pdb
+# ---------------------------
+
+# ============================================
+# STEP 4: Generate contact features
+# ============================================
+python generate_features.py -inp input_complexes.dat -out features.csv
+
+# Options:
+# -inp : Input file containing paths to complex PDB files
+# -out : Output CSV file for features (default: output.csv)
+# -lig : Ligand residue name (default: LIG)
+# -nt  : Number of CPU cores to use (default: 1)
+
+# ============================================
+# STEP 5: Predict binding affinity (pKa)
+# ============================================
+python predict.py -fn features.csv -out predicted_pKa.csv \
+    -weights models/CNN_final_model_weights.h5 \
+    -scaler models/StandardScaler_new.model
+
+# Options:
+# -fn      : Input features CSV file
+# -out     : Output file for predictions
+# -weights : CNN model weights file
+# -scaler  : StandardScaler model for normalization
+
+# ============================================
+# STEP 6: Understanding the output
+# ============================================
+# Output CSV format:
+# Column 1: Complex file path/ID
+# Column 2: pKa_predicted (predicted binding affinity)
+#
+# Interpretation:
+# - Higher pKa = Stronger binding
+# - pKa ~10: Very strong binder (nM range)
+# - pKa ~7: Strong binder (µM range)
+# - pKa ~5: Moderate binder
+# - pKa ~3: Weak binder
+
+# ============================================
+# COMPLETE EXAMPLE WORKFLOW
+# ============================================
+
+# 1. Navigate to OnionNet directory
+cd ~/onionnet
+
+# 2. Activate environment
+source .venv/bin/activate
+
+# 3. Prepare your complexes (protein + ligand in one PDB)
+# Assume you have: my_protein.pdb, my_ligand.mol2
+obabel my_ligand.mol2 -O my_ligand.pdb
+bash tools/prepare_complex.sh my_protein.pdb my_ligand.pdb my_complex.pdb
+
+# 4. Create input file
+echo "my_complex.pdb" > input.dat
+
+# 5. Generate features
+python generate_features.py -inp input.dat -out my_features.csv
+
+# 6. Predict binding affinity
+python predict.py -fn my_features.csv -out my_predictions.csv \
+    -weights models/CNN_final_model_weights.h5 \
+    -scaler models/StandardScaler_new.model
+
+# 7. View results
+cat my_predictions.csv
+
+# ============================================
+# USING WITH BOLTZ OUTPUT
+# ============================================
+# Boltz outputs PDB files that can be used directly with OnionNet
+
+# 1. Find Boltz prediction PDB files
+ls boltz_results_*/predictions/*/*.pdb
+
+# 2. Extract ligand and create combined complex
+# Note: Boltz PDBs already contain protein + ligand
+# But ligand may need residue name changed to "LIG"
+
+# Example script to prepare Boltz output:
+python << 'EOF'
+import glob
+pdb_files = glob.glob('boltz_results_*/predictions/*/*.pdb')
+with open('boltz_complexes.dat', 'w') as f:
+    for pdb in pdb_files:
+        f.write(pdb + '\n')
+print(f"Found {len(pdb_files)} Boltz complexes")
+EOF
+
+# 3. Generate features and predict
+python generate_features.py -inp boltz_complexes.dat -out boltz_features.csv
+python predict.py -fn boltz_features.csv -out boltz_pKa.csv \
+    -weights models/CNN_final_model_weights.h5 \
+    -scaler models/StandardScaler_new.model
+
+# ============================================
+# TROUBLESHOOTING
+# ============================================
+
+# Error: "PDB Error: All MODELs must contain the same number of ATOMs"
+# Fix: Make sure ligand residue name is "LIG" in the PDB file
+
+# Error: "cannot import name 'joblib'"
+# Fix: Already fixed in this installation
+
+# Error: "Argument(s) not recognized: {'lr': 0.001}"
+# Fix: Already fixed in this installation
+
+# Error: "No module named 'sklearn.preprocessing.data'"
+# Fix: Use StandardScaler_new.model instead of StandardScaler.model
+
+# Warning about CUDA/GPU not found
+# This is normal - OnionNet runs on CPU by default
+# GPU is optional and not required for predictions
+
+# ============================================
+# TUTORIAL TEST
+# ============================================
+cd tutorials/PDB_samples
+python ../../generate_features.py -inp input_PDB_testing.dat -out features.csv
+python ../../predict.py -fn features.csv -out predictions.csv \
+    -weights ../../models/CNN_final_model_weights.h5 \
+    -scaler ../../models/StandardScaler_new.model
+cat predictions.csv

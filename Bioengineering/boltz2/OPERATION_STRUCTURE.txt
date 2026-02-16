@@ -1,0 +1,6 @@
+salloc --gpus=1 --mem=32G --time=02:00:00
+salloc --gpus=v100:1 --mem=64G --time=03:00:00
+# Once the session starts, re-activate your venv and run Boltz
+source boltz/.venv_clean/bin/activate
+boltz predict .yaml --use_msa_server 
+boltz predict boltz/1_RIXI.yaml --use_msa_server --output_format pdb

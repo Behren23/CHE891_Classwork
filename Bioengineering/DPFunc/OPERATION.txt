@@ -1,0 +1,136 @@
+# DPFunc: Protein Function Prediction
+# ====================================
+# Paper: "DPFunc: accurately predicting protein function via deep learning 
+#         with domain-guided structure information" (Nature Communications, 2025)
+
+# ============================================
+# STEP 1: Request an interactive GPU session
+# ============================================
+salloc --gpus=v100:1 --mem=64G --time=03:00:00
+
+# Once the node changes (e.g., behren23@nvl-xxx), check if GPU is ready
+nvidia-smi
+
+# ============================================
+# STEP 2: Set up the environment
+# ============================================
+# Clear any module-related path conflicts
+module purge
+export PYTHONPATH=""
+
+# Navigate to DPFunc directory
+cd ~/DPFunc
+
+# Activate the DPFunc environment
+source ~/DPFunc/dpfunc_env/bin/activate
+
+# Verify the environment
+python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA:', torch.cuda.is_available()); import dgl; print('DGL:', dgl.__version__)"
+
+# ============================================
+# STEP 3: Download Required Data (First time only)
+# ============================================
+# Download dataset from Google Drive:
+# https://drive.google.com/file/d/1qrxbkk450GJzhVfqnAN9Ms798owrq96n/view?usp=sharing
+# Place in ./data/ directory
+
+# Download trained models from:
+# https://drive.google.com/file/d/1V0VTFTiB29ilbAIOZn0okBQWPlbOI3wN/view?usp=drive_link
+# Place in ./data/ directory
+
+# ============================================
+# STEP 4: Prepare Your Data
+# ============================================
+# Follow the Jupyter notebook tutorial for data processing:
+# jupyter notebook DataProcess/Process_data.ipynb
+# Or run: python -m jupyter notebook DataProcess/Process_data.ipynb
+
+# This will help you generate:
+# - Protein ID lists and GO annotations
+# - PDB graph structures with features
+# - InterPro domain annotations
+# - Multi-label binarizer files
+
+# ============================================
+# STEP 5: Train the Model
+# ============================================
+# Train on Molecular Function (mf), Biological Process (bp), or Cellular Component (cc)
+
+# Example: Train on Molecular Function
+python DPFunc_main.py -d mf -n 0 -e 15 -p my_model
+
+# Arguments:
+#   -d: ontology type (mf/cc/bp)
+#   -n: GPU number (default: 0)
+#   -e: training epochs (default: 15)
+#   -p: prefix for output results (default: temp_model)
+
+# ============================================
+# STEP 6: Run Prediction Only
+# ============================================
+# Use pre-trained models for prediction
+python DPFunc_pred.py -d mf -n 0 -p my_prediction
+
+# ============================================
+# Configuration Files
+# ============================================
+# Edit the configuration files in ./configure/ directory:
+# - mf.yaml  (Molecular Function)
+# - bp.yaml  (Biological Process)  
+# - cc.yaml  (Cellular Component)
+
+# Key paths to configure in YAML files:
+# - pid_list_file: protein ID list (.pkl)
+# - pid_go_file: protein GO annotations (.txt)
+# - pid_pdb_file: structure graphs (.pkl)
+# - interpro_file: InterPro annotations (.pkl)
+
+# ============================================
+# STEP 7: Run on a SINGLE PDB file (e.g., Boltz output)
+# ============================================
+# Example: Predict function for RIXI protein from Boltz results
+
+# First, prepare the protein data (generates ESM embeddings, graph, etc.)
+python predict_single_protein.py \
+    --pdb /mnt/home/behren23/boltz_results_1_RIXI/predictions/1_RIXI/1_RIXI_model_0.pdb \
+    --name "RIXI" \
+    --output ./dpfunc_prediction_RIXI
+
+# This will:
+# 1. Extract CA coordinates from the PDB file
+# 2. Generate ESM-2 embeddings (requires GPU, ~650M parameter model)
+# 3. Create a protein structure graph
+# 4. Prepare InterPro annotation placeholder
+# 5. Output all files needed for DPFunc prediction
+
+# After preparation, modify the test section in configure/mf.yaml to point to your files:
+#   test:
+#     pid_list_file: ./dpfunc_prediction_RIXI/pid_list.pkl
+#     pid_go_file: ./dpfunc_prediction_RIXI/protein_go.txt
+#     pid_pdb_file: ./dpfunc_prediction_RIXI/graph_RIXI.pkl
+#     interpro_file: ./dpfunc_prediction_RIXI/interpro_RIXI.pkl
+
+# Then run prediction:
+python DPFunc_pred.py -d mf -n 0 -p RIXI_prediction
+
+# ============================================
+# Quick Test Command for RIXI
+# ============================================
+cd ~/DPFunc
+source dpfunc_env/bin/activate
+python predict_single_protein.py \
+    --pdb /mnt/home/behren23/boltz_results_1_RIXI/predictions/1_RIXI/1_RIXI_model_0.pdb \
+    --name "RIXI" \
+    --output ./dpfunc_prediction_RIXI
+
+# ============================================
+# Monitor GPU Usage
+# ============================================
+watch -n 1 nvidia-smi
+
+# ============================================
+# Contact
+# ============================================
+# Wenkang Wang: wangwk@csu.edu.cn
+# Min Li: limin@mail.csu.edu.cn
+# GitHub: https://github.com/CSUBioGroup/DPFunc
